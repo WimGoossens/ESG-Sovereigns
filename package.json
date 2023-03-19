@@ -58,8 +58,10 @@
     "@types/d3-scale": "^4.0.3",
     "@types/react-scroll": "^1.8.4",
     "@types/react-tooltip": "^4.2.4",
+    "cookies-next": "^2.1.1",
     "d3-fetch": "^3.0.1",
-    "d3-scale": "^4.0.2"
+    "d3-scale": "^4.0.2",
+    "react-router-dom": "^6.9.0"
   },
   "main": "index.js",
   "repository": "https://github.com/WimGoossens/ESG-Sovereigns",

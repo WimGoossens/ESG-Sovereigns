@@ -1,44 +1,162 @@
-import { Button, Badge, Burger, Drawer, Code, Title, Anchor, Text } from '@mantine/core';
-import { UnstyledButton, Group, Avatar } from '@mantine/core';
-import React from 'react';
-import { Link } from 'react-scroll';
+import {
+  createStyles,
+  Header,
+  HoverCard,
+  Group,
+  Button,
+  UnstyledButton,
+  Text,
+  SimpleGrid,
+  ThemeIcon,
+  Anchor,
+  Divider,
+  Center,
+  Box,
+  Burger,
+  Drawer,
+  Collapse,
+  ScrollArea,
+  rem,
+} from '@mantine/core';
+import { MantineLogo } from '@mantine/ds';
+import { useDisclosure } from '@mantine/hooks';
+import {ActionToggle} from './ColorSwitch';
 
-const Header = () => {
-    //const theme = useMantineTheme();
-    const [opened, setOpened] = React.useState(false);
-    const title = opened ? 'Close navigation' : 'Open navigation';
+const useStyles = createStyles((theme) => ({
+  link: {
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
+    textDecoration: 'none',
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    fontWeight: 500,
+    fontSize: theme.fontSizes.sm,
 
-    return (
-        <header>
-            <div className="content-desktop">
-                <div>
-                    <Badge size="lg" radius={10} color="yellow">govvies.info</Badge>
-                </div>
-                <div className="navbar">
-                    <div className="navbar-item"><Link to="section-one" smooth duration={500}>Carousel</Link></div>
-                    <div className="navbar-item"><Link to="section-four" smooth duration={500}>Cards</Link></div>
-                    <div className="navbar-item"><Link to="section-five" smooth duration={500}>FAQS</Link></div>
+    [theme.fn.smallerThan('sm')]: {
+      height: rem(42),
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
+    },
 
-                    <Button color="yellow" onClick={() => redirectToLink('../map')}>Check out Mantine</Button>
-                </div>
-            </div>
+    ...theme.fn.hover({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    }),
+  },
 
-            <div className="content-mobile">
-                <div className="burger-button">
-                    <Burger
-                        opened={opened}
-                        onClick={() => setOpened((o) => !o)}
-                        title={title}
-                        size="sm"
-                    />
-                </div>
-            </div>
-        </header>
-    );
-};
+  subLink: {
+    width: '100%',
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
+    borderRadius: theme.radius.md,
 
-export default Header;
+    ...theme.fn.hover({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+    }),
 
-const redirectToLink = (link: string): void => {
-    window.open(link, '_blank');
-};
+    '&:active': theme.activeStyles,
+  },
+
+  dropdownFooter: {
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+    margin: `calc(${theme.spacing.md} * -1)`,
+    marginTop: theme.spacing.sm,
+    padding: `${theme.spacing.md} calc(${theme.spacing.md} * 2)`,
+    paddingBottom: theme.spacing.xl,
+    borderTop: `${rem(1)} solid ${
+      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
+    }`,
+  },
+
+  hiddenMobile: {
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
+  hiddenDesktop: {
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
+  },
+}));
+
+
+export function HeaderMegaMenu() {
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const { classes, theme } = useStyles();
+
+  return (
+    <Box pb={120}>
+      <Header height={60} px="md" fixed={true}>
+        <Group position="apart" sx={{ height: '100%' }}>
+          <MantineLogo href="#" size={30}/>
+
+          <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
+            <a href="#" className={classes.link}>
+              Home
+            </a>
+            <a href="#" className={classes.link}>
+              Data
+            </a>
+            <a href="#" className={classes.link}>
+              About
+            </a>
+          </Group>
+
+          <Group className={classes.hiddenMobile}>
+            <ActionToggle />
+            <Anchor href="https://mantine.dev/" target="_blank">
+              <Button radius="xl" h={30}>Go to world map</Button>
+            </Anchor>
+          </Group>
+          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+        </Group>
+      </Header>
+
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="80%"
+        padding="md"
+        title="StateScreen"
+        className={classes.hiddenDesktop}
+        zIndex={1000000}
+        position="right"
+      >
+        <ScrollArea h={`calc(70vh - ${rem(60)})`} mx="md">
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+
+          <a href="#" className={classes.link}>
+            Home
+          </a>
+          {/* <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Features
+              </Box>
+              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
+            </Center>
+          </UnstyledButton> */}
+          {/* <Collapse in={linksOpened}>{links}</Collapse> */}
+          <a href="#" className={classes.link}>
+            Data
+          </a>
+          <a href="#" className={classes.link}>
+            About
+          </a>
+
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+          <Group position="center" grow pb="xl" px="md">
+            <Button radius="xl" h={30}>Go to world map</Button>
+          </Group>
+          
+        </ScrollArea>
+        <ActionToggle />
+      </Drawer>
+    </Box>
+  );
+}
+
+export default HeaderMegaMenu;

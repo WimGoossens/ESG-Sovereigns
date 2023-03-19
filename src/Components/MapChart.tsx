@@ -8,14 +8,13 @@ import {
   Geography,
   ZoomableGroup
 } from "react-simple-maps";
+import { useId } from '@mantine/hooks';
 
 // import { Tooltip } from 'react-tooltip'
 
 import { useMantineTheme, Container, Tooltip } from '@mantine/core';
 
 const MapChart = () => {
-    const theme = useMantineTheme();
-
     const geoUrl = "/features.json";
     
     const [tooltipContent, setTooltipContent] = useState("");
@@ -26,14 +25,14 @@ const MapChart = () => {
 
     const geographyStyle = {
         default: {
-            fill: "#a9a9a9",
+            fill: "#adb5bd",
             transition: "all 500ms",
             outline: "none",
-            stroke: "grey",
+            stroke: "5c5f66",
             strokeWidth: 0.2
         },
         hover: {
-            fill: "#eecb7a",
+            fill: '#f08c00',
             transition: "all 250ms",
             outline: "none",
             stroke: "grey",

@@ -1,4 +1,4 @@
-import About from "../Components/About";
+import HeroTitle from "../Components/HeroTitle";
 import SectionOne from '../Components/SectionOne';
 import SectionTwo from '../Components/SectionTwo';
 import SectionThree from '../Components/SectionThree';
@@ -9,7 +9,7 @@ import MapChart from '../Components/MapChart';
 const Content = () => {
     return (
         <>
-            <About />
+            <HeroTitle />
 
             <SectionOne />
 
@@ -22,7 +22,7 @@ const Content = () => {
             <SectionFive />
 
             <MapChart />
-            { /* Other sections .. */ }
+
         </>
     )
 };

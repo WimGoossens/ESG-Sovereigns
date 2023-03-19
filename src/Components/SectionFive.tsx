@@ -9,7 +9,7 @@ const SectionFive = () => {
             <Container>
                 <div style={{ marginBottom: 30 }}>
                     <div style={{ textAlign: 'left' }}><Badge variant="filled" color="yellow">FAQs</Badge></div>
-                    <Text color="black">
+                    <Text>
                         <Title order={1} style={{ marginTop: 10 }}>Woah, Frequently asked questions here</Title>
                     </Text>
                 </div>

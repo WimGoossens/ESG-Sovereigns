@@ -1,19 +1,32 @@
+import { useState } from 'react';
 import Content from './Views/Content';
-import Header from './Components/Header';
-import {HeaderMegaMenu} from './Components/HeaderCopy';
+import {HeaderMegaMenu} from './Components/Header';
 import Footer from './Components/Footer';
-import { MantineProvider } from '@mantine/core';
-import { TypographyStylesProvider } from '@mantine/core';
+import { MantineProvider, ColorScheme, ColorSchemeProvider, ScrollArea } from '@mantine/core';
+// import { TypographyStylesProvider } from '@mantine/core';
 
 function App() {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
   return (
-    <MantineProvider>
-      <TypographyStylesProvider>
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+    <MantineProvider theme={{
+          colorScheme:colorScheme,
+          loader: 'bars',
+          primaryColor: 'orange',
+          fontFamily: 'Roboto',
+          defaultRadius: 5,
+        }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
         <HeaderMegaMenu />
         <Content />
         <Footer />
-      </TypographyStylesProvider>
     </MantineProvider>
+    </ColorSchemeProvider>
   );
 }
 
