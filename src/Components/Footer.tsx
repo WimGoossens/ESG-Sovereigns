@@ -1,5 +1,4 @@
 import { useMantineTheme, Container, Grid, Text, Button, Group, UnstyledButton, Anchor, Code, Image } from '@mantine/core';
-import { ReactComponent as MantineLogo } from '../Images/mantine-logo-full.svg';
 
 const Footer = () => {
     const theme = useMantineTheme();

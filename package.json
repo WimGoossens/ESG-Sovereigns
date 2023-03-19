@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
-    "@mantine/carousel": "^5.0.0",
-    "@mantine/core": "^5.0.0",
-    "@mantine/hooks": "^5.0.0",
+    "@mantine/carousel": "^6.0.2",
+    "@mantine/core": "^6.0.2",
+    "@mantine/hooks": "^6.0.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -51,10 +51,18 @@
     ]
   },
   "devDependencies": {
-    "@types/react-scroll": "^1.8.4"
+    "@mantine/ds": "^6.0.2",
+    "@mantine/prism": "^6.0.2",
+    "@tabler/icons-react": "^2.11.0",
+    "@types/d3-fetch": "^3.0.2",
+    "@types/d3-scale": "^4.0.3",
+    "@types/react-scroll": "^1.8.4",
+    "@types/react-tooltip": "^4.2.4",
+    "d3-fetch": "^3.0.1",
+    "d3-scale": "^4.0.2"
   },
   "main": "index.js",
-  "repository": "https://github.com/Giuseppetm/mantine-template",
+  "repository": "https://github.com/WimGoossens/ESG-Sovereigns",
   "author": "WimGoossens <wim@goossens.me>",
   "license": "MIT"
 }

@@ -25,6 +25,9 @@
   ],
   "typeRoots": [
     "./typings/",
-    "./node_modules/react-simple-maps/"
-  ]
+    "./node_modules/react-simple-maps/",
+    "./node_modules/d3-fetch/",
+    "./node_modules/d3-scale/",
+    "./node_modules/react-tooltip/"
+  ],
 }
