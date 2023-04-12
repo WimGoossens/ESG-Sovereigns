@@ -1,18 +1,12 @@
-// @ts-ignore
-import React, { useEffect, useState } from "react";
-import { csv } from "d3-fetch";
-import { scaleLinear } from "d3-scale";
+import { useState } from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
   ZoomableGroup
 } from "react-simple-maps";
-import { useId } from '@mantine/hooks';
 
-// import { Tooltip } from 'react-tooltip'
-
-import { useMantineTheme, Container, Tooltip } from '@mantine/core';
+import { Container, Tooltip } from '@mantine/core';
 
 const MapChart = () => {
     const geoUrl = "/features.json";
@@ -47,20 +41,27 @@ const MapChart = () => {
       const mapHeight = 450;
 
     return (
-        <Container>
-            <div>
+            // <div>
             <ComposableMap
                 projection="geoMercator"
-                // data-tip=""
+                projectionConfig={{
+                    scale: 155,
+                    rotate: [-11, 0, 0],
+                    center: [0, 0],
+                  }}
                 width={mapWidth}
                 height={mapHeight}
             >
                 <ZoomableGroup
                     center={[0,-317]}
-                    translateExtent={[
-                        [-100, -250],
-                        [900, mapHeight]
-                    ]}
+                    // translateExtent={[
+                    //     [-500, -250],
+                    //     [900, mapHeight]
+                    // ]}
+                    // translateExtent={[
+                    //     [-100, -0],
+                    //     [0, 0]
+                    // ]}
                     zoom={0.7}
                     minZoom={0.6}
                     maxZoom={10}
@@ -85,8 +86,7 @@ const MapChart = () => {
                     </Tooltip.Floating>
                 </ZoomableGroup>
             </ComposableMap>
-            </div>
-        </Container>
+            // </div>
     );
 };
 

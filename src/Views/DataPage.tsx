@@ -6,16 +6,9 @@ import SectionFour from '../Components/SectionFour';
 import SectionFive from '../Components/SectionFive';
 import MapChart from '../Components/MapChart';
 
-const Content = () => {
+const DataPage = () => {
     return (
         <>
-            <HeroTitle />
-
-            <SectionOne />
-
-            <SectionTwo />
-
-            <SectionThree />
 
             <SectionFour />
 
@@ -27,4 +20,4 @@ const Content = () => {
     )
 };
 
-export default Content;
+export default DataPage;

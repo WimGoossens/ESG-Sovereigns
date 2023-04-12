@@ -1,26 +1,19 @@
 import {
   createStyles,
   Header,
-  HoverCard,
   Group,
   Button,
-  UnstyledButton,
-  Text,
-  SimpleGrid,
-  ThemeIcon,
-  Anchor,
   Divider,
-  Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
   ScrollArea,
   rem,
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
 import {ActionToggle} from './ColorSwitch';
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -91,25 +84,28 @@ export function HeaderMegaMenu() {
     <Box pb={120}>
       <Header height={60} px="md" fixed={true}>
         <Group position="apart" sx={{ height: '100%' }}>
-          <MantineLogo href="#" size={30}/>
-
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <MantineLogo size={30}/>
+          </Link>
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-            <a href="#" className={classes.link}>
+            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link}>
               Home
-            </a>
-            <a href="#" className={classes.link}>
+            </Link>
+            <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link}>
               Data
-            </a>
-            <a href="#" className={classes.link}>
+            </Link>
+            <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link}>
               About
-            </a>
+            </Link>
           </Group>
 
           <Group className={classes.hiddenMobile}>
             <ActionToggle />
-            <Anchor href="https://mantine.dev/" target="_blank">
-              <Button radius="xl" h={30}>Go to world map</Button>
-            </Anchor>
+              <Link to="/map" style={{ textDecoration: 'none' }}>
+                <Button radius="xl" h={30}>
+                  Go to world map
+                </Button>
+              </Link>
           </Group>
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
         </Group>
@@ -127,30 +123,22 @@ export function HeaderMegaMenu() {
       >
         <ScrollArea h={`calc(70vh - ${rem(60)})`} mx="md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-
-          <a href="#" className={classes.link}>
-            Home
-          </a>
-          {/* <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Features
-              </Box>
-              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-            </Center>
-          </UnstyledButton> */}
-          {/* <Collapse in={linksOpened}>{links}</Collapse> */}
-          <a href="#" className={classes.link}>
+            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
+              Home
+            </Link>
+          <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
             Data
-          </a>
-          <a href="#" className={classes.link}>
+          </Link>
+          <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
             About
-          </a>
+          </Link>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-          <Group position="center" grow pb="xl" px="md">
-            <Button radius="xl" h={30}>Go to world map</Button>
-          </Group>
+            <Link to="/map" style={{ textDecoration: 'none' }} onClick={toggleDrawer}>
+              <Button radius="xl" h={30}>
+                  Go to world map
+              </Button>
+            </Link>
           
         </ScrollArea>
         <ActionToggle />

@@ -1,0 +1,30 @@
+{
+    "title": "Footer with links",
+    "category": "footers",
+    "author": "rtivital",
+    "responsive": true,
+    "dependencies": ["/core/text/", "/core/container/", "/core/action-icon/", "@tabler/icons-react"],
+    "props": {
+      "data": [
+        {
+          "title": "Navigation",
+          "links": [
+            { "label": "Home", "link": "/" },
+            { "label": "Data", "link": "/data" },
+            { "label": "About", "link": "about" },
+            { "label": "World Map", "link": "/map" }
+          ]
+        },
+        {
+            "title": "Legal",
+            "links": [
+              { "label": "Privacy Policy", "link": "#" },
+              { "label": "Terms & Conditions", "link": "#" }
+            ]
+          }
+      ]
+    },
+    "canvas": {
+      "center": false
+    }
+  }

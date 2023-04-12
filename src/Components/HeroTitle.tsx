@@ -1,5 +1,5 @@
 import { createStyles, Container, Text, Button, Group, rem } from '@mantine/core';
-import { GithubIcon } from '@mantine/ds';
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -84,26 +84,16 @@ export function HeroTitle() {
         </Text>
 
         <Group className={classes.controls}>
-          <Button
-            size="xl"
-            className={classes.control}
-            variant="gradient"
-            gradient={{ from: 'yellow.5', to: 'yellow.9' }}
-            onClick={() => redirectToLink('https://mantine.dev/')}
-          >
-            Go to world map
-          </Button>
-
-          {/* <Button
-            component="a"
-            href="https://github.com/mantinedev/mantine"
-            size="xl"
-            variant="default"
-            className={classes.control}
-            leftIcon={<GithubIcon size={20} />}
-          >
-            GitHub
-          </Button> */}
+          <Link to="/map" style={{ textDecoration: 'none' }}>
+            <Button
+              size="xl"
+              className={classes.control}
+              variant="gradient"
+              gradient={{ from: 'yellow.5', to: 'yellow.9' }}
+            >
+              Go to world map
+            </Button>
+          </Link>
         </Group>
       </Container>
     </div>
@@ -111,7 +101,3 @@ export function HeroTitle() {
 }
 
 export default HeroTitle;
-
-const redirectToLink = (link: string): void => {
-  window.open(link, '_blank');
-};

@@ -1,8 +1,8 @@
-import { Accordion, Text, Container, Title, Badge } from '@mantine/core';
+import { Accordion, Text, Container, Title, Badge, useMantineTheme } from '@mantine/core';
 import { FiCoffee, FiCloudSnow, FiAnchor } from "react-icons/fi";
 
 const SectionFive = () => {
-    //const theme = useMantineTheme();
+    const theme = useMantineTheme();
 
     return (
         <section id="section-five">

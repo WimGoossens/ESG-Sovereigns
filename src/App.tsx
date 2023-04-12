@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Content from './Views/Content';
 import {HeaderMegaMenu} from './Components/Header';
-import Footer from './Components/Footer';
-import { MantineProvider, ColorScheme, ColorSchemeProvider, ScrollArea } from '@mantine/core';
-// import { TypographyStylesProvider } from '@mantine/core';
+import Footer from './Components/Footer/Footer';
+import FooterJson from './Components/Footer/footer.json';
+import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -12,20 +12,20 @@ function App() {
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-    <MantineProvider theme={{
-          colorScheme:colorScheme,
-          loader: 'bars',
-          primaryColor: 'orange',
-          fontFamily: 'Roboto',
-          defaultRadius: 5,
-        }}
-        withGlobalStyles
-        withNormalizeCSS
-      >
-        <HeaderMegaMenu />
-        <Content />
-        <Footer />
-    </MantineProvider>
+      <MantineProvider theme={{
+            colorScheme:colorScheme,
+            loader: 'bars',
+            primaryColor: 'orange',
+            fontFamily: 'Roboto',
+            defaultRadius: 5,
+          }}
+          withGlobalStyles
+          withNormalizeCSS
+        >
+          <HeaderMegaMenu />
+          <Outlet />
+          <Footer data={FooterJson.props.data}/>
+      </MantineProvider>
     </ColorSchemeProvider>
   );
 }
