@@ -7,6 +7,7 @@ interface IndicatorProps {
     max: number;
     marks?: {value: number, label: string}[];
     description?: string;
+    step?: number;
     rangeValue: [number, number];
     setRangeValue: (newType: [number, number]) => void;
 }
@@ -33,8 +34,11 @@ function IndicatorRangeSlider( data : IndicatorProps) {
             </Group>
             <RangeSlider
                 marks={data.marks}
+                min={data.min}
+                max={data.max}
                 minRange={0}
-                label={(value) => `${value}%`}
+                step={data.step}
+                label={(value) => `${value.toFixed(1)}`}
                 value={data.rangeValue}
                 onChange={data.setRangeValue}
                 ml="md"

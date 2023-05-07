@@ -1,0 +1,1604 @@
+[
+  {
+    "country": "Afghanistan",
+    "alpha2": "AF",
+    "alpha3": "AFG",
+    "ecologicalFootprint": 0.431,
+    "freedomInTheWorld": 8,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Åland Islands",
+    "alpha2": "AX",
+    "alpha3": "ALA"
+  },
+  {
+    "country": "Albania",
+    "alpha2": "AL",
+    "alpha3": "ALB",
+    "ecologicalFootprint": 1.192,
+    "freedomInTheWorld": 67
+  },
+  {
+    "country": "Algeria",
+    "alpha2": "DZ",
+    "alpha3": "DZA",
+    "ecologicalFootprint": 1.479,
+    "freedomInTheWorld": 32
+  },
+  {
+    "country": "American Samoa",
+    "alpha2": "AS",
+    "alpha3": "ASM"
+  },
+  {
+    "country": "Andorra",
+    "alpha2": "AD",
+    "alpha3": "AND","freedomInTheWorld": 93
+  },
+  {
+    "country": "Angola",
+    "alpha2": "AO",
+    "alpha3": "AGO",
+    "ecologicalFootprint": 0.545,
+    "freedomInTheWorld": 28
+  },
+  {
+    "country": "Anguilla",
+    "alpha2": "AI",
+    "alpha3": "AIA"
+  },
+  {
+    "country": "Antarctica",
+    "alpha2": "AQ",
+    "alpha3": "ATA"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "alpha2": "AG",
+    "alpha3": "ATG",
+    "ecologicalFootprint": 2.941,
+    "freedomInTheWorld": 85
+  },
+  {
+    "country": "Argentina",
+    "alpha2": "AR",
+    "alpha3": "ARG",
+    "ecologicalFootprint": 2.093,
+    "freedomInTheWorld": 85
+  },
+  {
+    "country": "Armenia",
+    "alpha2": "AM",
+    "alpha3": "ARM",
+    "ecologicalFootprint": 1.201,
+    "freedomInTheWorld": 54
+  },
+  {
+    "country": "Aruba",
+    "alpha2": "AW",
+    "alpha3": "ABW"
+  },
+  {
+    "country": "Australia",
+    "alpha2": "AU",
+    "alpha3": "AUS",
+    "ecologicalFootprint": 4.477,
+    "freedomInTheWorld": 95
+  },
+  {
+    "country": "Austria",
+    "alpha2": "AT",
+    "alpha3": "AUT",
+    "ecologicalFootprint": 3.832,
+    "freedomInTheWorld": 93
+  },
+  {
+    "country": "Azerbaijan",
+    "alpha2": "AZ",
+    "alpha3": "AZE",
+    "ecologicalFootprint": 1.302,
+    "freedomInTheWorld": 9
+  },
+  {
+    "country": "Bahamas (the)",
+    "alpha2": "BS",
+    "alpha3": "BHS",
+    "ecologicalFootprint": 2.707
+  },
+  {
+    "country": "Bahrain",
+    "alpha2": "BH",
+    "alpha3": "BHR",
+    "ecologicalFootprint": 5.164,
+    "freedomInTheWorld": 12
+  },
+  {
+    "country": "Bangladesh",
+    "alpha2": "BD",
+    "alpha3": "BGD",
+    "ecologicalFootprint": 0.571,
+    "freedomInTheWorld": 40
+  },
+  {
+    "country": "Barbados",
+    "alpha2": "BB",
+    "alpha3": "BRB",
+    "ecologicalFootprint": 2.508,
+    "freedomInTheWorld": 94
+  },
+  {
+    "country": "Belarus",
+    "alpha2": "BY",
+    "alpha3": "BLR",
+    "ecologicalFootprint": 2.782,
+    "freedomInTheWorld": 8
+  },
+  {
+    "country": "Belgium",
+    "alpha2": "BE",
+    "alpha3": "BEL",
+    "ecologicalFootprint": 4.338,
+    "freedomInTheWorld": 96
+  },
+  {
+    "country": "Belize",
+    "alpha2": "BZ",
+    "alpha3": "BLZ",
+    "ecologicalFootprint": 4.974,
+    "freedomInTheWorld": 87
+  },
+  {
+    "country": "Benin",
+    "alpha2": "BJ",
+    "alpha3": "BEN",
+    "ecologicalFootprint": 1.016,
+    "freedomInTheWorld": 59
+  },
+  {
+    "country": "Bermuda",
+    "alpha2": "BM",
+    "alpha3": "BMU"
+  },
+  {
+    "country": "Bhutan",
+    "alpha2": "BT",
+    "alpha3": "BTN",
+    "ecologicalFootprint": 3.26,
+    "freedomInTheWorld": 61
+  },
+  {
+    "country": "Bolivia (Plurinational State of)",
+    "alpha2": "BO",
+    "alpha3": "BOL",
+    "ecologicalFootprint": 1.964,
+    "freedomInTheWorld": 66
+  },
+  {
+    "country": "Bonaire, Sint Eustatius and Saba",
+    "alpha2": "BQ",
+    "alpha3": "BES"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "alpha2": "BA",
+    "alpha3": "BIH",
+    "ecologicalFootprint": 2.459,
+    "freedomInTheWorld": 52
+  },
+  {
+    "country": "Botswana",
+    "alpha2": "BW",
+    "alpha3": "BWA",
+    "ecologicalFootprint": 1.497,
+    "freedomInTheWorld": 72
+  },
+  {
+    "country": "Bouvet Island",
+    "alpha2": "BV",
+    "alpha3": "BVT"
+  },
+  {
+    "country": "Brazil",
+    "alpha2": "BR",
+    "alpha3": "BRA",
+    "ecologicalFootprint": 1.635,
+    "freedomInTheWorld": 72
+  },
+  {
+    "country": "British Indian Ocean Territory (the)",
+    "alpha2": "IO",
+    "alpha3": "IOT"
+  },
+  {
+    "country": "Brunei Darussalam",
+    "alpha2": "BN",
+    "alpha3": "BRN",
+    "ecologicalFootprint": 3.422
+  },
+  {
+    "country": "Bulgaria",
+    "alpha2": "BG",
+    "alpha3": "BGR",
+    "ecologicalFootprint": 2.288,
+    "freedomInTheWorld": 79
+  },
+  {
+    "country": "Burkina Faso",
+    "alpha2": "BF",
+    "alpha3": "BFA",
+    "ecologicalFootprint": 0.797,
+    "freedomInTheWorld": 30
+  },
+  {
+    "country": "Burundi",
+    "alpha2": "BI",
+    "alpha3": "BDI",
+    "ecologicalFootprint": 0.527,
+    "freedomInTheWorld": 14
+  },
+  {
+    "country": "Cabo Verde",
+    "alpha2": "CV",
+    "alpha3": "CPV",
+    "ecologicalFootprint": 1.159,
+    "freedomInTheWorld": 92
+  },
+  {
+    "country": "Cambodia",
+    "alpha2": "KH",
+    "alpha3": "KHM",
+    "ecologicalFootprint": 0.949,
+    "freedomInTheWorld": 24
+  },
+  {
+    "country": "Cameroon",
+    "alpha2": "CM",
+    "alpha3": "CMR",
+    "ecologicalFootprint": 0.767,
+    "freedomInTheWorld": 15
+  },
+  {
+    "country": "Canada",
+    "alpha2": "CA",
+    "alpha3": "CAN",
+    "ecologicalFootprint": 5.096,
+    "freedomInTheWorld": 98
+  },
+  {
+    "country": "Cayman Islands (the)",
+    "alpha2": "KY",
+    "alpha3": "CYM"
+  },
+  {
+    "country": "Central African Republic (the)",
+    "alpha2": "CF",
+    "alpha3": "CAF",
+    "ecologicalFootprint": 0.761,
+    "freedomInTheWorld": 7,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Chad",
+    "alpha2": "TD",
+    "alpha3": "TCD",
+    "ecologicalFootprint": 1.043,
+    "freedomInTheWorld": 15
+  },
+  {
+    "country": "Chile",
+    "alpha2": "CL",
+    "alpha3": "CHL",
+    "ecologicalFootprint": 2.713,
+    "freedomInTheWorld": 94
+  },
+  {
+    "country": "China",
+    "alpha2": "CN",
+    "alpha3": "CHN",
+    "ecologicalFootprint": 2.399,
+    "freedomInTheWorld": 9
+  },
+  {
+    "country": "Christmas Island",
+    "alpha2": "CX",
+    "alpha3": "CXR"
+  },
+  {
+    "country": "Cocos (Keeling) Islands (the)",
+    "alpha2": "CC",
+    "alpha3": "CCK"
+  },
+  {
+    "country": "Colombia",
+    "alpha2": "CO",
+    "alpha3": "COL",
+    "ecologicalFootprint": 1.173,
+    "freedomInTheWorld": 70
+  },
+  {
+    "country": "Comoros (the)",
+    "alpha2": "KM",
+    "alpha3": "COM",
+    "ecologicalFootprint": 0.754,
+    "freedomInTheWorld": 42
+  },
+  {
+    "country": "Congo (the Democratic Republic of the)",
+    "alpha2": "CD",
+    "alpha3": "COD",
+    "ecologicalFootprint": 0.494,"countrySanction": "UN and EU"
+  },
+  {
+    "country": "Congo (the)",
+    "alpha2": "CG",
+    "alpha3": "COG",
+    "ecologicalFootprint": 0.65
+  },
+  {
+    "country": "Cook Islands (the)",
+    "alpha2": "CK",
+    "alpha3": "COK",
+    "ecologicalFootprint": 5.227
+  },
+  {
+    "country": "Costa Rica",
+    "alpha2": "CR",
+    "alpha3": "CRI",
+    "ecologicalFootprint": 1.546,
+    "freedomInTheWorld": 91
+  },
+  {
+    "country": "Côte d'Ivoire",
+    "alpha2": "CI",
+    "alpha3": "CIV",
+    "ecologicalFootprint": 0.882,
+    "freedomInTheWorld": 49
+  },
+  {
+    "country": "Croatia",
+    "alpha2": "HR",
+    "alpha3": "HRV",
+    "ecologicalFootprint": 2.452,
+    "freedomInTheWorld": 84
+  },
+  {
+    "country": "Cuba",
+    "alpha2": "CU",
+    "alpha3": "CUB",
+    "ecologicalFootprint": 1.113,
+    "freedomInTheWorld": 12
+  },
+  {
+    "country": "Curaçao",
+    "alpha2": "CW",
+    "alpha3": "CUW"
+  },
+  {
+    "country": "Cyprus",
+    "alpha2": "CY",
+    "alpha3": "CYP",
+    "ecologicalFootprint": 2.433,
+    "freedomInTheWorld": 92
+  },
+  {
+    "country": "Czechia",
+    "alpha2": "CZ",
+    "alpha3": "CZE",
+    "ecologicalFootprint": 3.613,
+    "freedomInTheWorld": 92
+  },
+  {
+    "country": "Denmark",
+    "alpha2": "DK",
+    "alpha3": "DNK",
+    "ecologicalFootprint": 4.204,
+    "freedomInTheWorld": 97
+  },
+  {
+    "country": "Djibouti",
+    "alpha2": "DJ",
+    "alpha3": "DJI",
+    "ecologicalFootprint": 1.541,
+    "freedomInTheWorld": 24
+  },
+  {
+    "country": "Dominica",
+    "alpha2": "DM",
+    "alpha3": "DMA",
+    "ecologicalFootprint": 1.553,
+    "freedomInTheWorld": 93
+  },
+  {
+    "country": "Dominican Republic (the)",
+    "alpha2": "DO",
+    "alpha3": "DOM",
+    "ecologicalFootprint": 1.118,
+    "freedomInTheWorld": 68
+  },
+  {
+    "country": "Ecuador",
+    "alpha2": "EC",
+    "alpha3": "ECU",
+    "ecologicalFootprint": 1.076,
+    "freedomInTheWorld": 70
+  },
+  {
+    "country": "Egypt",
+    "alpha2": "EG",
+    "alpha3": "EGY",
+    "ecologicalFootprint": 1.16,
+    "freedomInTheWorld": 18
+  },
+  {
+    "country": "El Salvador",
+    "alpha2": "SV",
+    "alpha3": "SLV",
+    "ecologicalFootprint": 1.281,
+    "freedomInTheWorld": 56
+  },
+  {
+    "country": "Equatorial Guinea",
+    "alpha2": "GQ",
+    "alpha3": "GNQ",
+    "ecologicalFootprint": 1.277,
+    "freedomInTheWorld": 5
+  },
+  {
+    "country": "Eritrea",
+    "alpha2": "ER",
+    "alpha3": "ERI",
+    "ecologicalFootprint": 0.515,
+    "freedomInTheWorld": 3
+  },
+  {
+    "country": "Estonia",
+    "alpha2": "EE",
+    "alpha3": "EST",
+    "ecologicalFootprint": 5.061,
+    "freedomInTheWorld": 94
+  },
+  {
+    "country": "Eswatini",
+    "alpha2": "SZ",
+    "alpha3": "SWZ",
+    "ecologicalFootprint": 1.557,
+    "freedomInTheWorld": 17
+  },
+  {
+    "country": "Ethiopia",
+    "alpha2": "ET",
+    "alpha3": "ETH",
+    "ecologicalFootprint": 0.645,
+    "freedomInTheWorld": 21
+  },
+  {
+    "country": "Falkland Islands (the) [Malvinas]",
+    "alpha2": "FK",
+    "alpha3": "FLK"
+  },
+  {
+    "country": "Faroe Islands (the)",
+    "alpha2": "FO",
+    "alpha3": "FRO"
+  },
+  {
+    "country": "Fiji",
+    "alpha2": "FJ",
+    "alpha3": "FJI",
+    "ecologicalFootprint": 1.685,
+    "freedomInTheWorld": 59
+  },
+  {
+    "country": "Finland",
+    "alpha2": "FI",
+    "alpha3": "FIN",
+    "ecologicalFootprint": 4.071,
+    "freedomInTheWorld": 100
+  },
+  {
+    "country": "France",
+    "alpha2": "FR",
+    "alpha3": "FRA",
+    "ecologicalFootprint": 2.793,
+    "freedomInTheWorld": 89
+  },
+  {
+    "country": "French Guiana",
+    "alpha2": "GF",
+    "alpha3": "GUF",
+    "ecologicalFootprint": 1.187
+  },
+  {
+    "country": "French Polynesia",
+    "alpha2": "PF",
+    "alpha3": "PYF",
+    "ecologicalFootprint": 2.525
+  },
+  {
+    "country": "French Southern Territories (the)",
+    "alpha2": "TF",
+    "alpha3": "ATF"
+  },
+  {
+    "country": "Gabon",
+    "alpha2": "GA",
+    "alpha3": "GAB",
+    "ecologicalFootprint": 1.234,
+    "freedomInTheWorld": 20
+  },
+  {
+    "country": "Gambia (the)",
+    "alpha2": "GM",
+    "alpha3": "GMB",
+    "ecologicalFootprint": 0.658
+  },
+  {
+    "country": "Georgia",
+    "alpha2": "GE",
+    "alpha3": "GEO",
+    "ecologicalFootprint": 1.466,
+    "freedomInTheWorld": 58
+  },
+  {
+    "country": "Germany",
+    "alpha2": "DE",
+    "alpha3": "DEU",
+    "ecologicalFootprint": 2.952,
+    "freedomInTheWorld": 94
+  },
+  {
+    "country": "Ghana",
+    "alpha2": "GH",
+    "alpha3": "GHA",
+    "ecologicalFootprint": 1.267,
+    "freedomInTheWorld": 80
+  },
+  {
+    "country": "Gibraltar",
+    "alpha2": "GI",
+    "alpha3": "GIB"
+  },
+  {
+    "country": "Greece",
+    "alpha2": "GR",
+    "alpha3": "GRC",
+    "ecologicalFootprint": 2.59,
+    "freedomInTheWorld": 86
+  },
+  {
+    "country": "Greenland",
+    "alpha2": "GL",
+    "alpha3": "GRL"
+  },
+  {
+    "country": "Grenada",
+    "alpha2": "GD",
+    "alpha3": "GRD",
+    "ecologicalFootprint": 1.602,
+    "freedomInTheWorld": 89
+  },
+  {
+    "country": "Guadeloupe",
+    "alpha2": "GP",
+    "alpha3": "GLP",
+    "ecologicalFootprint": 2.286
+  },
+  {
+    "country": "Guam",
+    "alpha2": "GU",
+    "alpha3": "GUM"
+  },
+  {
+    "country": "Guatemala",
+    "alpha2": "GT",
+    "alpha3": "GTM",
+    "ecologicalFootprint": 1.15,
+    "freedomInTheWorld": 49
+  },
+  {
+    "country": "Guernsey",
+    "alpha2": "GG",
+    "alpha3": "GGY"
+  },
+  {
+    "country": "Guinea",
+    "alpha2": "GN",
+    "alpha3": "GIN",
+    "ecologicalFootprint": 1.165,
+    "freedomInTheWorld": 30
+  },
+  {
+    "country": "Guinea-Bissau",
+    "alpha2": "GW",
+    "alpha3": "GNB",
+    "ecologicalFootprint": 0.927,
+    "freedomInTheWorld": 43,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Guyana",
+    "alpha2": "GY",
+    "alpha3": "GUY",
+    "ecologicalFootprint": 2.153,
+    "freedomInTheWorld": 73
+  },
+  {
+    "country": "Haiti",
+    "alpha2": "HT",
+    "alpha3": "HTI",
+    "ecologicalFootprint": 0.403,
+    "freedomInTheWorld": 31,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Heard Island and McDonald Islands",
+    "alpha2": "HM",
+    "alpha3": "HMD"
+  },
+  {
+    "country": "Holy See (the)",
+    "alpha2": "VA",
+    "alpha3": "VAT"
+  },
+  {
+    "country": "Honduras",
+    "alpha2": "HN",
+    "alpha3": "HND",
+    "ecologicalFootprint": 0.995,
+    "freedomInTheWorld": 48
+  },
+  {
+    "country": "Hong Kong",
+    "alpha2": "HK",
+    "alpha3": "HKG"
+  },
+  {
+    "country": "Hungary",
+    "alpha2": "HU",
+    "alpha3": "HUN",
+    "ecologicalFootprint": 2.443,
+    "freedomInTheWorld": 66
+  },
+  {
+    "country": "Iceland",
+    "alpha2": "IS",
+    "alpha3": "ISL","freedomInTheWorld": 94
+  },
+  {
+    "country": "India",
+    "alpha2": "IN",
+    "alpha3": "IND",
+    "ecologicalFootprint": 0.764,
+    "freedomInTheWorld": 66
+  },
+  {
+    "country": "Indonesia",
+    "alpha2": "ID",
+    "alpha3": "IDN",
+    "ecologicalFootprint": 1.085,
+    "freedomInTheWorld": 58
+  },
+  {
+    "country": "Iran (Islamic Republic of)",
+    "alpha2": "IR",
+    "alpha3": "IRN",
+    "ecologicalFootprint": 2.059,"countrySanction": "UN and EU"
+  },
+  {
+    "country": "Iraq",
+    "alpha2": "IQ",
+    "alpha3": "IRQ",
+    "ecologicalFootprint": 1.115,
+    "freedomInTheWorld": 29,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Ireland",
+    "alpha2": "IE",
+    "alpha3": "IRL",
+    "ecologicalFootprint": 3.318,
+    "freedomInTheWorld": 97
+  },
+  {
+    "country": "Isle of Man",
+    "alpha2": "IM",
+    "alpha3": "IMN"
+  },
+  {
+    "country": "Israel",
+    "alpha2": "IL",
+    "alpha3": "ISR",
+    "ecologicalFootprint": 2.944,
+    "freedomInTheWorld": 77
+  },
+  {
+    "country": "Italy",
+    "alpha2": "IT",
+    "alpha3": "ITA",
+    "ecologicalFootprint": 2.724,
+    "freedomInTheWorld": 90
+  },
+  {
+    "country": "Jamaica",
+    "alpha2": "JM",
+    "alpha3": "JAM",
+    "ecologicalFootprint": 1.032,
+    "freedomInTheWorld": 80
+  },
+  {
+    "country": "Japan",
+    "alpha2": "JP",
+    "alpha3": "JPN",
+    "ecologicalFootprint": 2.911,
+    "freedomInTheWorld": 96
+  },
+  {
+    "country": "Jersey",
+    "alpha2": "JE",
+    "alpha3": "JEY"
+  },
+  {
+    "country": "Jordan",
+    "alpha2": "JO",
+    "alpha3": "JOR",
+    "ecologicalFootprint": 1.11,
+    "freedomInTheWorld": 33
+  },
+  {
+    "country": "Kazakhstan",
+    "alpha2": "KZ",
+    "alpha3": "KAZ",
+    "ecologicalFootprint": 3.128,
+    "freedomInTheWorld": 23
+  },
+  {
+    "country": "Kenya",
+    "alpha2": "KE",
+    "alpha3": "KEN",
+    "ecologicalFootprint": 0.633,
+    "freedomInTheWorld": 52
+  },
+  {
+    "country": "Kiribati",
+    "alpha2": "KI",
+    "alpha3": "KIR","freedomInTheWorld": 91
+  },
+  {
+    "country": "Korea (the Democratic People's Republic of)",
+    "alpha2": "KP",
+    "alpha3": "PRK",
+    "ecologicalFootprint": 0.737,"countrySanction": "UN and EU"
+  },
+  {
+    "country": "Korea (the Republic of)",
+    "alpha2": "KR",
+    "alpha3": "KOR",
+    "ecologicalFootprint": 3.991
+  },
+  {
+    "country": "Kuwait",
+    "alpha2": "KW",
+    "alpha3": "KWT",
+    "ecologicalFootprint": 4.992,
+    "freedomInTheWorld": 37
+  },
+  {
+    "country": "Kyrgyzstan",
+    "alpha2": "KG",
+    "alpha3": "KGZ",
+    "ecologicalFootprint": 0.974,
+    "freedomInTheWorld": 27
+  },
+  {
+    "country": "Lao People's Democratic Republic (the)",
+    "alpha2": "LA",
+    "alpha3": "LAO",
+    "ecologicalFootprint": 1.163
+  },
+  {
+    "country": "Latvia",
+    "alpha2": "LV",
+    "alpha3": "LVA",
+    "ecologicalFootprint": 4.047,
+    "freedomInTheWorld": 88
+  },
+  {
+    "country": "Lebanon",
+    "alpha2": "LB",
+    "alpha3": "LBN",
+    "ecologicalFootprint": 1.873,
+    "freedomInTheWorld": 43,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Lesotho",
+    "alpha2": "LS",
+    "alpha3": "LSO",
+    "ecologicalFootprint": 0.976,
+    "freedomInTheWorld": 66
+  },
+  {
+    "country": "Liberia",
+    "alpha2": "LR",
+    "alpha3": "LBR",
+    "ecologicalFootprint": 0.785,
+    "freedomInTheWorld": 60
+  },
+  {
+    "country": "Libya",
+    "alpha2": "LY",
+    "alpha3": "LBY",
+    "ecologicalFootprint": 2.073,
+    "freedomInTheWorld": 10,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Liechtenstein",
+    "alpha2": "LI",
+    "alpha3": "LIE","freedomInTheWorld": 90
+  },
+  {
+    "country": "Lithuania",
+    "alpha2": "LT",
+    "alpha3": "LTU",
+    "ecologicalFootprint": 3.792,
+    "freedomInTheWorld": 89
+  },
+  {
+    "country": "Luxembourg",
+    "alpha2": "LU",
+    "alpha3": "LUX",
+    "ecologicalFootprint": 8.183,
+    "freedomInTheWorld": 97
+  },
+  {
+    "country": "Macao",
+    "alpha2": "MO",
+    "alpha3": "MAC"
+  },
+  {
+    "country": "Madagascar",
+    "alpha2": "MG",
+    "alpha3": "MDG",
+    "ecologicalFootprint": 0.601,
+    "freedomInTheWorld": 61
+  },
+  {
+    "country": "Malawi",
+    "alpha2": "MW",
+    "alpha3": "MWI",
+    "ecologicalFootprint": 0.556,
+    "freedomInTheWorld": 66
+  },
+  {
+    "country": "Malaysia",
+    "alpha2": "MY",
+    "alpha3": "MYS",
+    "ecologicalFootprint": 2.691,
+    "freedomInTheWorld": 53
+  },
+  {
+    "country": "Maldives",
+    "alpha2": "MV",
+    "alpha3": "MDV","freedomInTheWorld": 41
+  },
+  {
+    "country": "Mali",
+    "alpha2": "ML",
+    "alpha3": "MLI",
+    "ecologicalFootprint": 1.029,
+    "freedomInTheWorld": 29,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Malta",
+    "alpha2": "MT",
+    "alpha3": "MLT",
+    "ecologicalFootprint": 3.444,
+    "freedomInTheWorld": 89
+  },
+  {
+    "country": "Marshall Islands (the)",
+    "alpha2": "MH",
+    "alpha3": "MHL"
+  },
+  {
+    "country": "Martinique",
+    "alpha2": "MQ",
+    "alpha3": "MTQ",
+    "ecologicalFootprint": 2.208
+  },
+  {
+    "country": "Mauritania",
+    "alpha2": "MR",
+    "alpha3": "MRT",
+    "ecologicalFootprint": 1.59,
+    "freedomInTheWorld": 36
+  },
+  {
+    "country": "Mauritius",
+    "alpha2": "MU",
+    "alpha3": "MUS",
+    "ecologicalFootprint": 2.035,
+    "freedomInTheWorld": 85
+  },
+  {
+    "country": "Mayotte",
+    "alpha2": "YT",
+    "alpha3": "MYT"
+  },
+  {
+    "country": "Mexico",
+    "alpha2": "MX",
+    "alpha3": "MEX",
+    "ecologicalFootprint": 1.505,
+    "freedomInTheWorld": 60
+  },
+  {
+    "country": "Micronesia (Federated States of)",
+    "alpha2": "FM",
+    "alpha3": "FSM"
+  },
+  {
+    "country": "Moldova (the Republic of)",
+    "alpha2": "MD",
+    "alpha3": "MDA",
+    "ecologicalFootprint": 1.181
+  },
+  {
+    "country": "Monaco",
+    "alpha2": "MC",
+    "alpha3": "MCO","freedomInTheWorld": 84
+  },
+  {
+    "country": "Mongolia",
+    "alpha2": "MN",
+    "alpha3": "MNG",
+    "ecologicalFootprint": 4.597,
+    "freedomInTheWorld": 84
+  },
+  {
+    "country": "Montenegro",
+    "alpha2": "ME",
+    "alpha3": "MNE",
+    "ecologicalFootprint": 2.672,
+    "freedomInTheWorld": 67,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Montserrat",
+    "alpha2": "MS",
+    "alpha3": "MSR"
+  },
+  {
+    "country": "Morocco",
+    "alpha2": "MA",
+    "alpha3": "MAR",
+    "ecologicalFootprint": 1.108,
+    "freedomInTheWorld": 37
+  },
+  {
+    "country": "Mozambique",
+    "alpha2": "MZ",
+    "alpha3": "MOZ",
+    "ecologicalFootprint": 0.505,
+    "freedomInTheWorld": 45
+  },
+  {
+    "country": "Myanmar",
+    "alpha2": "MM",
+    "alpha3": "MMR",
+    "ecologicalFootprint": 1.048,
+    "freedomInTheWorld": 9
+  },
+  {
+    "country": "Namibia",
+    "alpha2": "NA",
+    "alpha3": "NAM",
+    "ecologicalFootprint": 1.586,
+    "freedomInTheWorld": 77
+  },
+  {
+    "country": "Nauru",
+    "alpha2": "NR",
+    "alpha3": "NRU","freedomInTheWorld": 77
+  },
+  {
+    "country": "Nepal",
+    "alpha2": "NP",
+    "alpha3": "NPL",
+    "ecologicalFootprint": 0.752,
+    "freedomInTheWorld": 58
+  },
+  {
+    "country": "Netherlands (the)",
+    "alpha2": "NL",
+    "alpha3": "NLD",
+    "ecologicalFootprint": 3.596,
+    "freedomInTheWorld": 97
+  },
+  {
+    "country": "New Caledonia",
+    "alpha2": "NC",
+    "alpha3": "NCL"
+  },
+  {
+    "country": "New Zealand",
+    "alpha2": "NZ",
+    "alpha3": "NZL",
+    "ecologicalFootprint": 3.349,
+    "freedomInTheWorld": 99
+  },
+  {
+    "country": "Nicaragua",
+    "alpha2": "NI",
+    "alpha3": "NIC",
+    "ecologicalFootprint": 0.902,
+    "freedomInTheWorld": 19
+  },
+  {
+    "country": "Niger (the)",
+    "alpha2": "NE",
+    "alpha3": "NER",
+    "ecologicalFootprint": 0.975,
+    "freedomInTheWorld": 51
+  },
+  {
+    "country": "Nigeria",
+    "alpha2": "NG",
+    "alpha3": "NGA",
+    "ecologicalFootprint": 0.687,
+    "freedomInTheWorld": 43
+  },
+  {
+    "country": "Niue",
+    "alpha2": "NU",
+    "alpha3": "NIU"
+  },
+  {
+    "country": "Norfolk Island",
+    "alpha2": "NF",
+    "alpha3": "NFK"
+  },
+  {
+    "country": "Northern Mariana Islands (the)",
+    "alpha2": "MP",
+    "alpha3": "MNP"
+  },
+  {
+    "country": "Norway",
+    "alpha2": "NO",
+    "alpha3": "NOR",
+    "ecologicalFootprint": 3.582,
+    "freedomInTheWorld": 100
+  },
+  {
+    "country": "Oman",
+    "alpha2": "OM",
+    "alpha3": "OMN",
+    "ecologicalFootprint": 3.973,
+    "freedomInTheWorld": 24
+  },
+  {
+    "country": "Pakistan",
+    "alpha2": "PK",
+    "alpha3": "PAK",
+    "ecologicalFootprint": 0.487,
+    "freedomInTheWorld": 37
+  },
+  {
+    "country": "Palau",
+    "alpha2": "PW",
+    "alpha3": "PLW","freedomInTheWorld": 92
+  },
+  {
+    "country": "Palestine, State of",
+    "alpha2": "PS",
+    "alpha3": "PSE",
+    "ecologicalFootprint": 0.721
+  },
+  {
+    "country": "Panama",
+    "alpha2": "PA",
+    "alpha3": "PAN",
+    "ecologicalFootprint": 1.847,
+    "freedomInTheWorld": 83
+  },
+  {
+    "country": "Papua New Guinea",
+    "alpha2": "PG",
+    "alpha3": "PNG",
+    "ecologicalFootprint": 1.088,
+    "freedomInTheWorld": 61
+  },
+  {
+    "country": "Paraguay",
+    "alpha2": "PY",
+    "alpha3": "PRY",
+    "ecologicalFootprint": 1.94,
+    "freedomInTheWorld": 65
+  },
+  {
+    "country": "Peru",
+    "alpha2": "PE",
+    "alpha3": "PER",
+    "ecologicalFootprint": 1.49,
+    "freedomInTheWorld": 70
+  },
+  {
+    "country": "Philippines (the)",
+    "alpha2": "PH",
+    "alpha3": "PHL",
+    "ecologicalFootprint": 0.927,
+    "freedomInTheWorld": 58
+  },
+  {
+    "country": "Pitcairn",
+    "alpha2": "PN",
+    "alpha3": "PCN"
+  },
+  {
+    "country": "Poland",
+    "alpha2": "PL",
+    "alpha3": "POL",
+    "ecologicalFootprint": 3.004,
+    "freedomInTheWorld": 81
+  },
+  {
+    "country": "Portugal",
+    "alpha2": "PT",
+    "alpha3": "PRT",
+    "ecologicalFootprint": 2.876,
+    "freedomInTheWorld": 96
+  },
+  {
+    "country": "Puerto Rico",
+    "alpha2": "PR",
+    "alpha3": "PRI"
+  },
+  {
+    "country": "Qatar",
+    "alpha2": "QA",
+    "alpha3": "QAT",
+    "ecologicalFootprint": 9.017,
+    "freedomInTheWorld": 25
+  },
+  {
+    "country": "Republic of North Macedonia",
+    "alpha2": "MK",
+    "alpha3": "MKD",
+    "ecologicalFootprint": 1.957
+  },
+  {
+    "country": "Réunion",
+    "alpha2": "RE",
+    "alpha3": "REU",
+    "ecologicalFootprint": 2.902
+  },
+  {
+    "country": "Romania",
+    "alpha2": "RO",
+    "alpha3": "ROU",
+    "ecologicalFootprint": 2.265,
+    "freedomInTheWorld": 83
+  },
+  {
+    "country": "Russian Federation (the)",
+    "alpha2": "RU",
+    "alpha3": "RUS",
+    "ecologicalFootprint": 3.356
+  },
+  {
+    "country": "Rwanda",
+    "alpha2": "RW",
+    "alpha3": "RWA",
+    "ecologicalFootprint": 0.48,
+    "freedomInTheWorld": 23
+  },
+  {
+    "country": "Saint Barthélemy",
+    "alpha2": "BL",
+    "alpha3": "BLM"
+  },
+  {
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "alpha2": "SH",
+    "alpha3": "SHN"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "alpha2": "KN",
+    "alpha3": "KNA"
+  },
+  {
+    "country": "Saint Lucia",
+    "alpha2": "LC",
+    "alpha3": "LCA",
+    "ecologicalFootprint": 1.43
+  },
+  {
+    "country": "Saint Martin (French part)",
+    "alpha2": "MF",
+    "alpha3": "MAF"
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "alpha2": "PM",
+    "alpha3": "SPM"
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "alpha2": "VC",
+    "alpha3": "VCT",
+    "ecologicalFootprint": 1.752
+  },
+  {
+    "country": "Samoa",
+    "alpha2": "WS",
+    "alpha3": "WSM",
+    "ecologicalFootprint": 1.675,
+    "freedomInTheWorld": 83
+  },
+  {
+    "country": "San Marino",
+    "alpha2": "SM",
+    "alpha3": "SMR","freedomInTheWorld": 97
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "alpha2": "ST",
+    "alpha3": "STP",
+    "ecologicalFootprint": 0.812
+  },
+  {
+    "country": "Saudi Arabia",
+    "alpha2": "SA",
+    "alpha3": "SAU",
+    "ecologicalFootprint": 3.131,
+    "freedomInTheWorld": 8
+  },
+  {
+    "country": "Senegal",
+    "alpha2": "SN",
+    "alpha3": "SEN",
+    "ecologicalFootprint": 0.892,
+    "freedomInTheWorld": 68
+  },
+  {
+    "country": "Serbia",
+    "alpha2": "RS",
+    "alpha3": "SRB",
+    "ecologicalFootprint": 1.94,
+    "freedomInTheWorld": 60,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Seychelles",
+    "alpha2": "SC",
+    "alpha3": "SYC","freedomInTheWorld": 79
+  },
+  {
+    "country": "Sierra Leone",
+    "alpha2": "SL",
+    "alpha3": "SLE",
+    "ecologicalFootprint": 0.716,
+    "freedomInTheWorld": 63
+  },
+  {
+    "country": "Singapore",
+    "alpha2": "SG",
+    "alpha3": "SGP",
+    "ecologicalFootprint": 3.748,
+    "freedomInTheWorld": 47
+  },
+  {
+    "country": "Sint Maarten (Dutch part)",
+    "alpha2": "SX",
+    "alpha3": "SXM"
+  },
+  {
+    "country": "Slovakia",
+    "alpha2": "SK",
+    "alpha3": "SVK",
+    "ecologicalFootprint": 2.99,
+    "freedomInTheWorld": 90
+  },
+  {
+    "country": "Slovenia",
+    "alpha2": "SI",
+    "alpha3": "SVN",
+    "ecologicalFootprint": 3.391,
+    "freedomInTheWorld": 95
+  },
+  {
+    "country": "Solomon Islands",
+    "alpha2": "SB",
+    "alpha3": "SLB",
+    "ecologicalFootprint": 1.119,
+    "freedomInTheWorld": 76
+  },
+  {
+    "country": "Somalia",
+    "alpha2": "SO",
+    "alpha3": "SOM",
+    "ecologicalFootprint": 0.642,
+    "freedomInTheWorld": 8,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "South Africa",
+    "alpha2": "ZA",
+    "alpha3": "ZAF",
+    "ecologicalFootprint": 2.401,
+    "freedomInTheWorld": 79
+  },
+  {
+    "country": "South Georgia and the South Sandwich Islands",
+    "alpha2": "GS",
+    "alpha3": "SGS"
+  },
+  {
+    "country": "South Sudan",
+    "alpha2": "SS",
+    "alpha3": "SSD",
+    "ecologicalFootprint": 1.018,
+    "freedomInTheWorld": 1,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Spain",
+    "alpha2": "ES",
+    "alpha3": "ESP",
+    "ecologicalFootprint": 2.775,
+    "freedomInTheWorld": 90
+  },
+  {
+    "country": "Sri Lanka",
+    "alpha2": "LK",
+    "alpha3": "LKA",
+    "ecologicalFootprint": 0.956,
+    "freedomInTheWorld": 54
+  },
+  {
+    "country": "Sudan (the)",
+    "alpha2": "SD",
+    "alpha3": "SDN",
+    "ecologicalFootprint": 0.932,
+    "freedomInTheWorld": 10,
+    "countrySanction": "UN and EU"
+  },
+  {
+    "country": "Suriname",
+    "alpha2": "SR",
+    "alpha3": "SUR",
+    "ecologicalFootprint": 1.936,
+    "freedomInTheWorld": 79
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "alpha2": "SJ",
+    "alpha3": "SJM"
+  },
+  {
+    "country": "Sweden",
+    "alpha2": "SE",
+    "alpha3": "SWE",
+    "ecologicalFootprint": 3.966,
+    "freedomInTheWorld": 100
+  },
+  {
+    "country": "Switzerland",
+    "alpha2": "CH",
+    "alpha3": "CHE",
+    "ecologicalFootprint": 2.747,
+    "freedomInTheWorld": 96
+  },
+  {
+    "country": "Syrian Arab Republic",
+    "alpha2": "SY",
+    "alpha3": "SYR",
+    "ecologicalFootprint": 0.845,"countrySanction": "UN"
+  },
+  {
+    "country": "Taiwan (Province of China)",
+    "alpha2": "TW",
+    "alpha3": "TWN"
+  },
+  {
+    "country": "Tajikistan",
+    "alpha2": "TJ",
+    "alpha3": "TJK",
+    "ecologicalFootprint": 0.713,
+    "freedomInTheWorld": 7
+  },
+  {
+    "country": "Tanzania, United Republic of",
+    "alpha2": "TZ",
+    "alpha3": "TZA",
+    "ecologicalFootprint": 0.741
+  },
+  {
+    "country": "Thailand",
+    "alpha2": "TH",
+    "alpha3": "THA",
+    "ecologicalFootprint": 1.486,
+    "freedomInTheWorld": 30
+  },
+  {
+    "country": "Timor-Leste",
+    "alpha2": "TL",
+    "alpha3": "TLS",
+    "ecologicalFootprint": 0.374,
+    "freedomInTheWorld": 72
+  },
+  {
+    "country": "Togo",
+    "alpha2": "TG",
+    "alpha3": "TGO",
+    "ecologicalFootprint": 0.659,
+    "freedomInTheWorld": 42
+  },
+  {
+    "country": "Tokelau",
+    "alpha2": "TK",
+    "alpha3": "TKL"
+  },
+  {
+    "country": "Tonga",
+    "alpha2": "TO",
+    "alpha3": "TON",
+    "ecologicalFootprint": 1.845,
+    "freedomInTheWorld": 81
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "alpha2": "TT",
+    "alpha3": "TTO",
+    "ecologicalFootprint": 4.703,
+    "freedomInTheWorld": 82
+  },
+  {
+    "country": "Tunisia",
+    "alpha2": "TN",
+    "alpha3": "TUN",
+    "ecologicalFootprint": 1.279,
+    "freedomInTheWorld": 56
+  },
+  {
+    "country": "Turkey",
+    "alpha2": "TR",
+    "alpha3": "TUR",
+    "ecologicalFootprint": 2.114,
+    "freedomInTheWorld": 32
+  },
+  {
+    "country": "Turkmenistan",
+    "alpha2": "TM",
+    "alpha3": "TKM",
+    "ecologicalFootprint": 3.094,
+    "freedomInTheWorld": 2
+  },
+  {
+    "country": "Turks and Caicos Islands (the)",
+    "alpha2": "TC",
+    "alpha3": "TCA"
+  },
+  {
+    "country": "Tuvalu",
+    "alpha2": "TV",
+    "alpha3": "TUV","freedomInTheWorld": 93
+  },
+  {
+    "country": "Uganda",
+    "alpha2": "UG",
+    "alpha3": "UGA",
+    "ecologicalFootprint": 0.669,
+    "freedomInTheWorld": 35
+  },
+  {
+    "country": "Ukraine",
+    "alpha2": "UA",
+    "alpha3": "UKR",
+    "ecologicalFootprint": 1.531,
+    "freedomInTheWorld": 50
+  },
+  {
+    "country": "United Arab Emirates (the)",
+    "alpha2": "AE",
+    "alpha3": "ARE",
+    "ecologicalFootprint": 5.116,
+    "freedomInTheWorld": 18
+  },
+  {
+    "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+    "alpha2": "GB",
+    "alpha3": "GBR",
+    "ecologicalFootprint": 2.641,
+    "freedomInTheWorld": 93
+  },
+  {
+    "country": "United States Minor Outlying Islands (the)",
+    "alpha2": "UM",
+    "alpha3": "UMI"
+  },
+  {
+    "country": "United States of America (the)",
+    "alpha2": "US",
+    "alpha3": "USA",
+    "ecologicalFootprint": 5.132
+  },
+  {
+    "country": "Uruguay",
+    "alpha2": "UY",
+    "alpha3": "URY",
+    "ecologicalFootprint": 0.795,
+    "freedomInTheWorld": 96
+  },
+  {
+    "country": "Uzbekistan",
+    "alpha2": "UZ",
+    "alpha3": "UZB",
+    "ecologicalFootprint": 1.288,
+    "freedomInTheWorld": 12
+  },
+  {
+    "country": "Vanuatu",
+    "alpha2": "VU",
+    "alpha3": "VUT","freedomInTheWorld": 82
+  },
+  {
+    "country": "Venezuela (Bolivarian Republic of)",
+    "alpha2": "VE",
+    "alpha3": "VEN",
+    "ecologicalFootprint": 1.511
+  },
+  {
+    "country": "Viet Nam",
+    "alpha2": "VN",
+    "alpha3": "VNM",
+    "ecologicalFootprint": 1.436
+  },
+  {
+    "country": "Virgin Islands (British)",
+    "alpha2": "VG",
+    "alpha3": "VGB"
+  },
+  {
+    "country": "Virgin Islands (U.S.)",
+    "alpha2": "VI",
+    "alpha3": "VIR"
+  },
+  {
+    "country": "Wallis and Futuna",
+    "alpha2": "WF",
+    "alpha3": "WLF"
+  },
+  {
+    "country": "Western Sahara",
+    "alpha2": "EH",
+    "alpha3": "ESH"
+  },
+  {
+    "country": "Yemen",
+    "alpha2": "YE",
+    "alpha3": "YEM",
+    "ecologicalFootprint": 0.321,
+    "freedomInTheWorld": 9,
+    "countrySanction": "UN"
+  },
+  {
+    "country": "Zambia",
+    "alpha2": "ZM",
+    "alpha3": "ZMB",
+    "ecologicalFootprint": 0.811,
+    "freedomInTheWorld": 54
+  },
+  {
+    "country": "Zimbabwe",
+    "alpha2": "ZW",
+    "alpha3": "ZWE",
+    "ecologicalFootprint": 0.768,
+    "freedomInTheWorld": 28
+  }
+]

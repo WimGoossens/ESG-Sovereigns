@@ -35,14 +35,13 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface RowData {
-  name: string;
-  email: string;
-  company: string;
-  country?: string;
-  countryISO?: string;
-  eligible?: boolean;
+  country: string;
+  alpha2: string;
+  alpha3: string;
   ecologicalFootprint?: number;
-  countryUNSanction?: boolean;
+  freedomInTheWorld?: number;
+  countrySanction?: string;
+  eligible?: string;
 }
 
 interface TableSortProps {
@@ -93,12 +92,66 @@ function sortData(
   }
 
   return filterData(
-    [...data].sort((a, b) => {
+    [...data].sort((a: any, b: any) => {
       if (payload.reversed) {
-        return String(b[sortBy]).localeCompare(String(a[sortBy]));
+        if (a[sortBy] && b[sortBy]) {
+          return b[sortBy].localeCompare(a[sortBy]);
+        } else if (a[sortBy] && !b[sortBy]) {
+          return -1;
+        } else if (!a[sortBy] && b[sortBy]) {
+          return 1;
+        } else {
+          return 0;
+        }
       }
 
-      return String(a[sortBy]).localeCompare(String(b[sortBy]));
+      if (a[sortBy] && b[sortBy]) {
+        return a[sortBy].localeCompare(b[sortBy]);
+      } else if (a[sortBy] && !b[sortBy]) {
+        return -1;
+      } else if (!a[sortBy] && b[sortBy]) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }),
+    payload.search
+  );
+}
+
+function sortNumericData(
+  data: RowData[],
+  payload: { sortBy: keyof RowData | null; reversed: boolean; search: string }
+) {
+  const { sortBy } = payload;
+
+  if (!sortBy) {
+    return filterData(data, payload.search);
+  }
+
+  return filterData(
+    [...data].sort((a, b) => {
+      if (payload.reversed) {
+        if (a[sortBy] && b[sortBy]) {
+          return Number(b[sortBy]) - Number(a[sortBy]);
+        } else if (a[sortBy] && !b[sortBy]) {
+          return 0 - Number(a[sortBy]);
+        } else if (!a[sortBy] && b[sortBy]) {
+          return Number(b[sortBy]);
+        } else {
+          return 0;
+        }
+      }
+
+      if (a[sortBy] && b[sortBy]) {
+        return Number(a[sortBy]) - Number(b[sortBy]);
+      } else if (a[sortBy] && !b[sortBy]) {
+        return 0 - Number(a[sortBy]);
+      } else if (!a[sortBy] && b[sortBy]) {
+        return Number(b[sortBy]);
+      } else {
+        return 0;
+      }
     }),
     payload.search
   );
@@ -110,11 +163,15 @@ function CountryTable({ data }: TableSortProps) {
   const [sortBy, setSortBy] = useState<keyof RowData | null>(null);
   const [reverseSortDirection, setReverseSortDirection] = useState(false);
 
-  const setSorting = (field: keyof RowData) => {
+  const setSorting = (field: keyof RowData, numeric?: Boolean) => {
     const reversed = field === sortBy ? !reverseSortDirection : false;
     setReverseSortDirection(reversed);
     setSortBy(field);
-    setSortedData(sortData(data, { sortBy: field, reversed, search }));
+    if (numeric) {
+      setSortedData(sortNumericData(data, { sortBy: field, reversed, search }));
+    } else {
+      setSortedData(sortData(data, { sortBy: field, reversed, search }));
+    }
   };
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -124,14 +181,14 @@ function CountryTable({ data }: TableSortProps) {
   };
 
   const rows = sortedData.map((row) => (
-    <tr key={row.name}>
+    <tr key={row.country}>
         <td>{row.country}</td>
-        <td>{row.countryISO}</td>
+        {/* <td>{row.alpha2}</td> */}
+        <td>{row.alpha3}</td>
         <td>{row.eligible}</td>
-
-        <td>{row.name}</td>
-        <td>{row.email}</td>
-        <td>{row.company}</td>
+        <td>{row.ecologicalFootprint}</td>
+        <td>{row.freedomInTheWorld}</td>
+        <td>{row.countrySanction}</td>
     </tr>
   ));
 
@@ -154,12 +211,19 @@ function CountryTable({ data }: TableSortProps) {
             >
               Country
             </Th>
-            <Th
-              sorted={sortBy === 'countryISO'}
+            {/* <Th
+              sorted={sortBy === 'alpha2'}
               reversed={reverseSortDirection}
-              onSort={() => setSorting('countryISO')}
+              onSort={() => setSorting('alpha2')}
             >
-              ISO
+              Alpha-2
+            </Th> */}
+            <Th
+              sorted={sortBy === 'alpha3'}
+              reversed={reverseSortDirection}
+              onSort={() => setSorting('alpha3')}
+            >
+              Alpha-3
             </Th>
             <Th
               sorted={sortBy === 'eligible'}
@@ -169,26 +233,27 @@ function CountryTable({ data }: TableSortProps) {
               Eligible
             </Th>
             <Th
-              sorted={sortBy === 'name'}
+              sorted={sortBy === 'ecologicalFootprint'}
               reversed={reverseSortDirection}
-              onSort={() => setSorting('name')}
+              onSort={() => setSorting('ecologicalFootprint', true)}
             >
-              Name
+              Ecological Footprint
             </Th>
             <Th
-              sorted={sortBy === 'email'}
+              sorted={sortBy === 'freedomInTheWorld'}
               reversed={reverseSortDirection}
-              onSort={() => setSorting('email')}
+              onSort={() => setSorting('freedomInTheWorld', true)}
             >
-              Email
+              Freedom in the World
             </Th>
             <Th
-              sorted={sortBy === 'company'}
+              sorted={sortBy === 'countrySanction'}
               reversed={reverseSortDirection}
-              onSort={() => setSorting('company')}
+              onSort={() => setSorting('countrySanction')}
             >
-              Company
+              Sanctions?
             </Th>
+            
           </tr>
         </thead>
         <tbody>

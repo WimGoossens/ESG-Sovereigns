@@ -12,7 +12,7 @@ function CountryList() {
   const ths = (
     <tr>
       <th>Country</th>
-      <th>ISO</th>
+      <th>Alpha-2</th>
       <th>Eligible? (Y/N)</th>
       <th>Atomic mass</th>
     </tr>

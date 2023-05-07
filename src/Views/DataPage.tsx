@@ -14,7 +14,7 @@ const DataPage = () => {
 
             <SectionFive />
 
-            <MapChart />
+            {/* <MapChart /> */}
 
         </>
     )

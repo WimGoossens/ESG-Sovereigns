@@ -6,10 +6,25 @@ import {
   ZoomableGroup
 } from "react-simple-maps";
 
-import { Container, Tooltip } from '@mantine/core';
+import { Tooltip } from '@mantine/core';
+import WorldMap from './features.json';
 
-const MapChart = () => {
-    const geoUrl = "/features.json";
+interface RowData {
+    country: string;
+    alpha2: string;
+    alpha3: string;
+    ecologicalFootprint?: number;
+    freedomInTheWorld?: number;
+    countrySanction?: string;
+    eligible?: string;
+  }
+  
+interface TableSortProps {
+    data: RowData[];
+}
+
+function MapChart({ data }: TableSortProps) {
+    const geoUrl = WorldMap;
     
     const [tooltipContent, setTooltipContent] = useState("");
 
@@ -23,6 +38,46 @@ const MapChart = () => {
             transition: "all 500ms",
             outline: "none",
             stroke: "5c5f66",
+            strokeWidth: 0.2
+        },
+        hover: {
+            fill: '#f08c00',
+            transition: "all 250ms",
+            outline: "none",
+            stroke: "grey",
+            strokeWidth: 0.2
+        },
+        pressed: {
+            outline: "none"
+        }
+      };
+
+      const geographyStyleEligible = {
+        default: {
+            fill: "#8ce99a",
+            transition: "all 500ms",
+            outline: "none",
+            stroke: "8ce99a",
+            strokeWidth: 0.2
+        },
+        hover: {
+            fill: '#f08c00',
+            transition: "all 250ms",
+            outline: "none",
+            stroke: "grey",
+            strokeWidth: 0.2
+        },
+        pressed: {
+            outline: "none"
+        }
+      };
+
+      const geographyStyleIneligible = {
+        default: {
+            fill: "#ffa8a8",
+            transition: "all 500ms",
+            outline: "none",
+            stroke: "ffa8a8",
             strokeWidth: 0.2
         },
         hover: {
@@ -73,7 +128,7 @@ const MapChart = () => {
                                 <Geography
                                     key={geo.rsmKey}
                                     geography={geo}
-                                    style={geographyStyle}
+                                    style={(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'Yes') ? geographyStyleEligible : geographyStyleIneligible }
                                     onMouseEnter={() => {
                                         setTooltipContent(`${geo.properties.name}`);
                                     }}

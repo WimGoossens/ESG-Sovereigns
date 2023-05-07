@@ -31,13 +31,14 @@ function Filters( status : FilterStatus ) {
                 <IndicatorRangeSlider
                     title={"Ecological Footprint"}
                     min={0}
-                    max={100}
+                    max={10}
+                    step={0.1}
                     rangeValue={status.rangeValueEcoFP}
                     setRangeValue={status.setRangeValueEcoFP}
                     marks={[
-                        { value: 25, label: '25%' },
-                        { value: 50, label: '50%' },
-                        { value: 75, label: '75%' },
+                        { value: 2.5, label: '2.5' },
+                        { value: 5, label: '5' },
+                        { value: 7.5, label: '7.5' },
                       ]}
                     description={"The Ecological Footprint equals the number of planets required if the whole world population lived like the countries population."}
                 />
