@@ -1,4 +1,4 @@
-import { RangeSlider, Space, Text, Popover, Group } from '@mantine/core';
+import { RangeSlider, Space, Text, Popover, Group, Anchor } from '@mantine/core';
 import { IconInfoCircle } from '@tabler/icons-react';
 
 interface IndicatorProps {
@@ -7,6 +7,8 @@ interface IndicatorProps {
     max: number;
     marks?: {value: number, label: string}[];
     description?: string;
+    source?: string;
+    sourceLink?: string;
     step?: number;
     rangeValue: [number, number];
     setRangeValue: (newType: [number, number]) => void;
@@ -28,6 +30,10 @@ function IndicatorRangeSlider( data : IndicatorProps) {
                     <Popover.Dropdown>
                         <Text size="sm">
                             {data.description}
+                        </Text>
+                        <Space h="xs" />
+                        <Text size="sm">
+                            Source: <Anchor href={data.sourceLink} target="_blank">{data.source}</Anchor>
                         </Text>
                     </Popover.Dropdown>
                 </Popover>

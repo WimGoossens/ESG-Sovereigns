@@ -211,13 +211,6 @@ function CountryTable({ data }: TableSortProps) {
             >
               Country
             </Th>
-            {/* <Th
-              sorted={sortBy === 'alpha2'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('alpha2')}
-            >
-              Alpha-2
-            </Th> */}
             <Th
               sorted={sortBy === 'alpha3'}
               reversed={reverseSortDirection}

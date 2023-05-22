@@ -1,4 +1,4 @@
-import { Grid, Skeleton, Container, Box } from '@mantine/core';
+import { Grid, Skeleton, Container, Box, Paper, LoadingOverlay } from '@mantine/core';
 import MapChart from '../Components/MapChart';
 import Filters from './Filters';
 import { useState } from 'react';
@@ -15,18 +15,29 @@ function Dashboard() {
   const [rangeValueCPI, setRangeValueCPI] = useState<[number, number]>([0, 100]);
   const [rangeValueGFP, setRangeValueGFP] = useState<[number, number]>([0, 100]);
 
-  console.log(CountryData);
-
   for (var i = 0; i < CountryData.length; i++) {
     CountryData[i] = Object.assign(CountryData[i], {
-        eligible: (((checkedUNSanctions && typeof CountryData[i].countrySanction === 'string') || 
-        ((typeof CountryData[i].ecologicalFootprint === 'number') &&
-          (Number(CountryData[i].ecologicalFootprint) < rangeValueEcoFP[0]) || (Number(CountryData[i].ecologicalFootprint) > rangeValueEcoFP[1])))
-          ? "No" : "Yes"), 
+        eligible: ((checkedUNSanctions && typeof CountryData[i].countrySanction === 'string') ? "No" : 
+          ((typeof CountryData[i].ecologicalFootprint === 'number') && 
+          (typeof CountryData[i].freedomInTheWorld === 'number') ?
+            (((Number(CountryData[i].ecologicalFootprint) < rangeValueEcoFP[0]) || (Number(CountryData[i].ecologicalFootprint) > rangeValueEcoFP[1])) || 
+            ((Number(CountryData[i].freedomInTheWorld) < rangeValueGFP[0]) || (Number(CountryData[i].freedomInTheWorld) > rangeValueGFP[1])) ? "No" : "Yes") : "Insufficient Data")
+        )
     });
   }
 
-  console.log(CountryData);
+  function checkEligibility(country: Object) {
+    if(checkedUNSanctions && typeof CountryData[i].countrySanction === 'string'){
+      return "No";
+    } else if (true){
+      return "Yes*";
+    }
+  }
+
+  for (var i = 0; i < CountryData.length; i++) {
+    CountryData[i] = Object.assign(CountryData[i], {
+        eligible: checkEligibility(CountryData[i])});
+  }
   
   return (
     <Container fluid={true}>
@@ -48,12 +59,11 @@ function Dashboard() {
             />
         </Grid.Col>
         <Grid.Col xs={7}>
-          <Box sx={(theme) => ({
-              backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0]})}>
+          <Paper withBorder>
             <MapChart 
               data={CountryData}
             />
-          </Box>
+          </Paper>
         </Grid.Col>
         <Grid.Col xs={10}>
             <CountryTable

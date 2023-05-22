@@ -116,7 +116,7 @@ export function HeaderMegaMenu() {
         onClose={closeDrawer}
         size="80%"
         padding="md"
-        title="StateScreen"
+        title="Govvies.info"
         className={classes.hiddenDesktop}
         zIndex={1000000}
         position="right"

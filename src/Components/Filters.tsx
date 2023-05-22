@@ -40,7 +40,11 @@ function Filters( status : FilterStatus ) {
                         { value: 5, label: '5' },
                         { value: 7.5, label: '7.5' },
                       ]}
-                    description={"The Ecological Footprint equals the number of planets required if the whole world population lived like the countries population."}
+                    description={
+                        "The Ecological Footprint measures how much area of biologically productive land and water an individual, population or activity requires to produce all the resources it consumes and to absorb the waste it generates, using prevailing technology and resource management practices. The Ecological Footprint is usually measured in global hectares. Because trade is global, an individual or country’s Footprint includes land or sea from all over the world."
+                    }
+                    source={"Global Footprint Network, 2018"}
+                    sourceLink={"https://www.footprintnetwork.org/"}
                 />
             </Accordion.Panel>
         </Accordion.Item>
@@ -83,20 +87,24 @@ function Filters( status : FilterStatus ) {
                         { value: 50, label: '50%' },
                         { value: 75, label: '75%' },
                     ]}
-                    description={"The Ecological Footprint equals the number of planets required if the whole world population lived like the countries population."}
+                    description={"Test"}
                 />
                 <IndicatorRangeSlider 
-                    title={"Global Freedom Score"}
+                    title={"Freedom in the World score"}
                     min={0}
                     max={100}
                     rangeValue={status.rangeValueGFP}
                     setRangeValue={status.setRangeValueGFP}
                     marks={[
-                        { value: 25, label: '25%' },
-                        { value: 50, label: '50%' },
-                        { value: 75, label: '75%' },
+                        { value: 25, label: '25' },
+                        { value: 50, label: '50' },
+                        { value: 75, label: '75' },
                     ]}
-                    description={"The Ecological Footprint equals the number of planets required if the whole world population lived like the countries population."}
+                    description={
+                        "Freedom in the World is an annual global report on political rights and civil liberties, composed of numerical ratings and descriptive texts for each country and a select group of territories."
+                    }
+                    source={"Freedom in the World, 2023"}
+                    sourceLink={"https://freedomhouse.org/"}
                 />
             </Accordion.Panel>
         </Accordion.Item>

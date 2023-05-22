@@ -32,71 +32,100 @@ function MapChart({ data }: TableSortProps) {
         setTooltipContent("");
     };
 
-    const geographyStyle = {
+    const geographyStyleInsufficientData = {
         default: {
             fill: "#adb5bd",
-            transition: "all 500ms",
-            outline: "none",
-            stroke: "5c5f66",
-            strokeWidth: 0.2
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
         },
         hover: {
-            fill: '#f08c00',
+            fill: '#22b8cf',
             transition: "all 250ms",
-            outline: "none",
-            stroke: "grey",
-            strokeWidth: 0.2
-        },
-        pressed: {
-            outline: "none"
+            stroke: "orange",
+            strokeWidth: 0.25
         }
       };
 
       const geographyStyleEligible = {
         default: {
-            fill: "#8ce99a",
-            transition: "all 500ms",
-            outline: "none",
-            stroke: "8ce99a",
-            strokeWidth: 0.2
+            fill: "#94d82d",
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
         },
         hover: {
-            fill: '#f08c00',
+            fill: '#22b8cf',
             transition: "all 250ms",
-            outline: "none",
-            stroke: "grey",
-            strokeWidth: 0.2
-        },
-        pressed: {
-            outline: "none"
+            stroke: "orange",
+            strokeWidth: 0.25
         }
       };
 
       const geographyStyleIneligible = {
         default: {
-            fill: "#ffa8a8",
-            transition: "all 500ms",
-            outline: "none",
-            stroke: "ffa8a8",
-            strokeWidth: 0.2
+            fill: "#ff6b6b",
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
         },
         hover: {
-            fill: '#f08c00',
+            fill: '#22b8cf',
             transition: "all 250ms",
-            outline: "none",
-            stroke: "grey",
-            strokeWidth: 0.2
-        },
-        pressed: {
-            outline: "none"
+            stroke: "orange",
+            strokeWidth: 0.25
         }
       };
+
+      const geographyStyleInsufficientEligible = {
+        default: {
+            fill: "url(#insufficientYes)",
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
+        },
+        hover: {
+            fill: '#22b8cf',
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
+        }
+      };
+
+      const geographyStyleInsufficientIneligible = {
+        default: {
+            fill: "url(#insufficientNo)",
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
+        },
+        hover: {
+            fill: '#22b8cf',
+            transition: "all 250ms",
+            stroke: "orange",
+            strokeWidth: 0.25
+        }
+    };
     
-      const mapWidth = 800;
-      const mapHeight = 450;
+    const mapWidth = 800;
+    const mapHeight = 450;
+
+    function geographyStyler(eligibility: String) {
+        switch(eligibility) {
+            case "Yes":
+                return geographyStyleEligible;
+            case "Yes*":
+                return geographyStyleInsufficientEligible;
+            case "No":
+                return geographyStyleIneligible;
+            case "No*":
+                return geographyStyleInsufficientIneligible;
+            default:
+                return geographyStyleInsufficientData;
+        }
+    };
 
     return (
-            // <div>
             <ComposableMap
                 projection="geoMercator"
                 projectionConfig={{
@@ -107,16 +136,18 @@ function MapChart({ data }: TableSortProps) {
                 width={mapWidth}
                 height={mapHeight}
             >
+                <pattern id="insufficientYes" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#94d82d" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#adb5bd" stroke-width="2" />
+                </pattern>
+
+                <pattern id="insufficientNo" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#ff6b6b" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#adb5bd" stroke-width="2" />
+                </pattern>
+
                 <ZoomableGroup
                     center={[0,-317]}
-                    // translateExtent={[
-                    //     [-500, -250],
-                    //     [900, mapHeight]
-                    // ]}
-                    // translateExtent={[
-                    //     [-100, -0],
-                    //     [0, 0]
-                    // ]}
                     zoom={0.7}
                     minZoom={0.6}
                     maxZoom={10}
@@ -128,20 +159,26 @@ function MapChart({ data }: TableSortProps) {
                                 <Geography
                                     key={geo.rsmKey}
                                     geography={geo}
-                                    style={(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'Yes') ? geographyStyleEligible : geographyStyleIneligible }
+                                    style={geographyStyler(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)))}
+                                    
+                                    
+                                    // {(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'Yes') ? geographyStyleEligible : 
+                                    //    (((String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'Yes*') ? geographyStyleInsufficientEligible : 
+                                    //     ((String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'No') ? geographyStyleIneligible : 
+                                    //     ((String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'No') ? geographyStyleIneligible) : geographyStyleInsufficientData)
+                                    // }
                                     onMouseEnter={() => {
-                                        setTooltipContent(`${geo.properties.name}`);
+                                        setTooltipContent(`${geo.properties.name} - ${(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)))}`);
                                     }}
                                     onMouseLeave={onMouseLeave}
                                 />
-                                )
                             )
-                        }
+                        )
+                    }
                     </Geographies>
-                    </Tooltip.Floating>
-                </ZoomableGroup>
-            </ComposableMap>
-            // </div>
+                </Tooltip.Floating>
+            </ZoomableGroup>
+        </ComposableMap>
     );
 };
 
