@@ -8,7 +8,8 @@ export interface DotsProps extends React.ComponentPropsWithoutRef<'svg'> {
       <svg
         aria-hidden
         xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
+        fill="#44b5af"
+        fill-opacity="0.4"
         viewBox="0 0 185 185"
         width={size}
         height={size}

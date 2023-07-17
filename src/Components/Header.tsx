@@ -89,7 +89,7 @@ export function HeaderMegaMenu() {
             <Link to="/" style={{ textDecoration: 'none' }}>
             <Group>
               <Image src={require('../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
-              <Title order={2} color="#44b5af">
+              <Title order={2} color="govvies.0" fw={400}>
                 govvies.info
               </Title>
             </Group>
@@ -107,12 +107,12 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group position="right" className={classes.hiddenMobile}>
-            <ActionToggle />
-              <Link to="/map" style={{ textDecoration: 'none' }}>
-                <Button radius="xl" h={30}>
-                  Go to world map
-                </Button>
-              </Link>
+            <ActionToggle/>
+            <Link to="/map">
+              <Button radius="xl" h={30} color="govvies.0" >
+                Go to world map
+              </Button>
+            </Link>
           </Group>
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
         </Group>
@@ -123,7 +123,12 @@ export function HeaderMegaMenu() {
         onClose={closeDrawer}
         size="80%"
         padding="md"
-        title="Govvies.info"
+        title={<Group>
+        <Image src={require('../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
+        <Title order={2} color="govvies.0" fw={400}>
+          govvies.info
+        </Title>
+      </Group>}
         className={classes.hiddenDesktop}
         zIndex={1000000}
         position="right"

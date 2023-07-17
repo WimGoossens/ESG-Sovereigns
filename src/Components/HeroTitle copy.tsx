@@ -102,7 +102,7 @@ export function HeroText() {
       <Container size={1200} className={classes.inner}>
         <Title className={classes.title}>
           Discover the impact of {' '}
-          <Text component="span" variant="gradient" gradient={{ from: 'yellow.5', to: 'yellow.9' }} inherit>
+          <Text component="span" variant="gradient" gradient={{ from: '#2f7883', to: '#58acaa' }} inherit>
             ESG criteria
           </Text>{' '}
           on global exposures
@@ -120,7 +120,7 @@ export function HeroText() {
               size="xl"
               className={classes.control}
               variant="gradient"
-              gradient={{ from: 'yellow.5', to: 'yellow.9' }}
+              gradient={{ from: '#58ACAA', to: '#2f7883' }}
             >
               Go to world map
             </Button>

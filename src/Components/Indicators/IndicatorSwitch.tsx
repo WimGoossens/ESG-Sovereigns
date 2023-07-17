@@ -37,7 +37,7 @@ function IndicatorSwitch( data : IndicatorProps ) {
             <Switch
                 // label="UN Sanctions list"
                 size="md"
-                color="orange"
+                color="govvies.0"
                 checked={data.checked}
                 onChange={(event) => data.setChecked?.(event.currentTarget.checked)}
                 ml="md"

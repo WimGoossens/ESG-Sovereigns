@@ -48,6 +48,7 @@ function IndicatorRangeSlider( data : IndicatorProps) {
                 value={data.rangeValue}
                 onChange={data.setRangeValue}
                 ml="md"
+                color="govvies.0"
             />
             <Space h="xl" />
         </>

@@ -12,7 +12,7 @@ export function ActionToggle() {
         sx={(theme) => ({
           // backgroundColor:
           //   theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-          color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
+          color: theme.colorScheme === 'dark' ? theme.colors.govvies[7] : theme.colors.govvies[4],
         })}
       >
         {colorScheme === 'dark' ? <IconSun size="1.2rem" /> : <IconMoonStars size="1.2rem" />}
