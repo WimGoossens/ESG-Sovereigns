@@ -1,9 +1,11 @@
-import { Switch, Space, Group, Text, Popover } from '@mantine/core';
+import { Switch, Space, Group, Text, Popover, Anchor } from '@mantine/core';
 import { IconInfoCircle } from '@tabler/icons-react';
 
 interface IndicatorProps {
     title: string;
     description: string;
+    source?: string;
+    sourceLink?: string;
     checked: boolean;
     setChecked?: (newType: boolean) => void;
 }
@@ -24,6 +26,10 @@ function IndicatorSwitch( data : IndicatorProps ) {
                     <Popover.Dropdown>
                         <Text size="sm">
                             {data.description}
+                        </Text>
+                        <Space h="xs" />
+                        <Text size="sm">
+                            Source: <Anchor href={data.sourceLink} target="_blank">{data.source}</Anchor>
                         </Text>
                     </Popover.Dropdown>
                 </Popover>

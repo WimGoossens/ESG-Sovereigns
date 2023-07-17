@@ -1,4 +1,4 @@
-import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
+import { createStyles, Text, Container, ActionIcon, Group, rem, Image, Title } from '@mantine/core';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 import { Link } from 'react-router-dom';
@@ -137,12 +137,18 @@ export function Footer({ data }: FooterLinksProps) {
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
-        <div className={classes.logo}>
-          <MantineLogo size={30} />
+        {/* <div className={classes.logo}> */}
+          <Group  position="center">
+          <Image src={require('../../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
+            {/* <Title order={2} color="#44b5af">
+              govvies.info
+            </Title> */}
+          
           <Text size="xs" color="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            ESG insights for sovereign exposures. Made easy.
           </Text>
-        </div>
+          </Group>
+        {/* </div> */}
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>

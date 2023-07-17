@@ -14,8 +14,9 @@ interface RowData {
     alpha2: string;
     alpha3: string;
     ecologicalFootprint?: number;
-    freedomInTheWorld?: number;
-    countrySanction?: string;
+    freedomInTheWorldScore?: number;
+    sanctionsUN?: string;
+    sanctionsEU?: string;
     eligible?: string;
   }
   
@@ -36,13 +37,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "#adb5bd",
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         },
         hover: {
             fill: '#22b8cf',
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         }
       };
@@ -51,13 +52,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "#94d82d",
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         },
         hover: {
             fill: '#22b8cf',
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         }
       };
@@ -66,13 +67,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "#ff6b6b",
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         },
         hover: {
             fill: '#22b8cf',
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         }
       };
@@ -81,13 +82,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "url(#insufficientYes)",
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         },
         hover: {
             fill: '#22b8cf',
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         }
       };
@@ -96,13 +97,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "url(#insufficientNo)",
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         },
         hover: {
             fill: '#22b8cf',
             transition: "all 250ms",
-            stroke: "orange",
+            stroke: "#A6A7AB",
             strokeWidth: 0.25
         }
     };
@@ -152,7 +153,7 @@ function MapChart({ data }: TableSortProps) {
                     minZoom={0.6}
                     maxZoom={10}
                 >
-                <Tooltip.Floating label={tooltipContent} color="dark">
+                <Tooltip.Floating label={tooltipContent} color="#A6A7AB">
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
                             geographies.map((geo) => (

@@ -9,12 +9,15 @@ import {
   Center,
   TextInput,
   rem,
+  Paper,
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
 import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   th: {
+    position: 'sticky',
+    top: 0,
     padding: '0 !important',
   },
 
@@ -34,14 +37,50 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const useStylesHeader = createStyles((theme) => ({
+  header: {
+    position: 'sticky',
+    top: 0,
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    transition: 'box-shadow 150ms ease',
+
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      bottom: 0,
+      borderBottom: `${rem(1)} solid ${
+        theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[2]
+      }`,
+    },
+  },
+
+  scrolled: {
+    boxShadow: theme.shadows.sm,
+  },
+}));
+
 interface RowData {
   country: string;
   alpha2: string;
   alpha3: string;
-  ecologicalFootprint?: number;
-  freedomInTheWorld?: number;
-  countrySanction?: string;
+  sanctionsUN?: string;
+  sanctionsEU?: string;
   eligible?: string;
+  ecologicalFootprint?: number;
+  freedomInTheWorldScore?: number;
+  humanDevelopmentIndex?: number;
+  womenBusinessAndTheLaw?: number;
+  humanCapitalIndex?: number;
+  globalPeaceIndex?: number;
+  fragileStatesIndex?: number;
+  corruptionPerceptionIndex?: number;
+  worldRiskIndex?: number;
+  environmentalPerformanceIndex?: number;
+  aqueduct3?: number;
+  nDGAIN?: number;
+  pressFreedomIndex?: number;
 }
 
 interface TableSortProps {
@@ -61,13 +100,15 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
   return (
     <th className={classes.th}>
       <UnstyledButton onClick={onSort} className={classes.control}>
-        <Group position="apart">
-          <Text fw={500} fz="sm">
-            {children}
-          </Text>
-          <Center className={classes.icon}>
-            <Icon size="0.9rem" stroke={1.5} />
-          </Center>
+        <Group position="apart" noWrap>
+          <Group position="left">
+            <Text fw={500} fz="sm">
+              {children}
+            </Text>
+          </Group>
+          <Group position="right">
+            <Icon size="1rem" stroke={1.5} />
+          </Group>
         </Group>
       </UnstyledButton>
     </th>
@@ -183,14 +224,28 @@ function CountryTable({ data }: TableSortProps) {
   const rows = sortedData.map((row) => (
     <tr key={row.country}>
         <td>{row.country}</td>
-        {/* <td>{row.alpha2}</td> */}
         <td>{row.alpha3}</td>
         <td>{row.eligible}</td>
+        <td>{row.sanctionsUN}</td>
+        <td>{row.sanctionsEU}</td>
         <td>{row.ecologicalFootprint}</td>
-        <td>{row.freedomInTheWorld}</td>
-        <td>{row.countrySanction}</td>
+        <td>{row.freedomInTheWorldScore}</td>
+        <td>{row.humanCapitalIndex}</td>
+        <td>{row.humanDevelopmentIndex}</td>
+        <td>{row.womenBusinessAndTheLaw}</td>
+        <td>{row.globalPeaceIndex}</td>
+        <td>{row.fragileStatesIndex}</td>
+        <td>{row.corruptionPerceptionIndex}</td>
+        <td>{row.worldRiskIndex}</td>
+        <td>{row.environmentalPerformanceIndex}</td>
+        <td>{row.aqueduct3}</td>
+        <td>{row.nDGAIN}</td>
+        <td>{row.pressFreedomIndex}</td>
     </tr>
   ));
+
+  const { classes, cx } = useStylesHeader();
+  const [scrolled, setScrolled] = useState(false);
 
   return (
     <ScrollArea>
@@ -201,68 +256,155 @@ function CountryTable({ data }: TableSortProps) {
         value={search}
         onChange={handleSearchChange}
       />
-      <Table horizontalSpacing="md" verticalSpacing="xs" miw={700} sx={{ tableLayout: 'fixed' }}>
-        <thead>
-          <tr>
-          <Th
-              sorted={sortBy === 'country'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('country')}
-            >
-              Country
-            </Th>
-            <Th
-              sorted={sortBy === 'alpha3'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('alpha3')}
-            >
-              Alpha-3
-            </Th>
-            <Th
-              sorted={sortBy === 'eligible'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('eligible')}
-            >
-              Eligible
-            </Th>
-            <Th
-              sorted={sortBy === 'ecologicalFootprint'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('ecologicalFootprint', true)}
-            >
-              Ecological Footprint
-            </Th>
-            <Th
-              sorted={sortBy === 'freedomInTheWorld'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('freedomInTheWorld', true)}
-            >
-              Freedom in the World
-            </Th>
-            <Th
-              sorted={sortBy === 'countrySanction'}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting('countrySanction')}
-            >
-              Sanctions?
-            </Th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          {rows.length > 0 ? (
-            rows
-          ) : (
-            <tr>
-              <td colSpan={Object.keys(data[0]).length}>
-                <Text weight={500} align="center">
-                  Nothing found
-                </Text>
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </Table>
+      <Paper withBorder>
+        <ScrollArea.Autosize miw={1100} mx='auto' w={'100%'} h={400}>
+          <Table sx={{ tableLayout: 'auto', width: "100%" }}>
+            <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
+              <tr>
+              <Th
+                  sorted={sortBy === 'country'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('country')}
+                >
+                  Country
+                </Th>
+                <Th
+                  sorted={sortBy === 'alpha3'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('alpha3')}
+                >
+                  Alpha-3
+                </Th>
+                <Th
+                  sorted={sortBy === 'eligible'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('eligible')}
+                >
+                  Eligible
+                </Th>
+                <Th
+                  sorted={sortBy === 'sanctionsUN'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('sanctionsUN')}
+                >
+                  UN Sanctions?
+                </Th>
+                <Th
+                  sorted={sortBy === 'sanctionsEU'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('sanctionsEU')}
+                >
+                  EU Sanctions?
+                </Th>
+                <Th
+                  sorted={sortBy === 'ecologicalFootprint'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('ecologicalFootprint', true)}
+                >
+                  Ecological Footprint
+                </Th>
+                <Th
+                  sorted={sortBy === 'freedomInTheWorldScore'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('freedomInTheWorldScore', true)}
+                >
+                  Freedom in the World Score
+                </Th>
+                <Th
+                  sorted={sortBy === 'humanCapitalIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('humanCapitalIndex', true)}
+                >
+                  Human Capital Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'humanDevelopmentIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('humanDevelopmentIndex', true)}
+                >
+                  Human Development Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'womenBusinessAndTheLaw'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('womenBusinessAndTheLaw', true)}
+                >
+                  Women, Business and the Law
+                </Th>
+                <Th
+                  sorted={sortBy === 'globalPeaceIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('globalPeaceIndex', true)}
+                >
+                  Global Peace Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'fragileStatesIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('fragileStatesIndex', true)}
+                >
+                  Fragile States Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'corruptionPerceptionIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('corruptionPerceptionIndex', true)}
+                >
+                  Corruption Perception Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'worldRiskIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('worldRiskIndex', true)}
+                >
+                  World Risk Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'environmentalPerformanceIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('environmentalPerformanceIndex', true)}
+                >
+                  Environmental Performance Index
+                </Th>
+                <Th
+                  sorted={sortBy === 'aqueduct3'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('aqueduct3', true)}
+                >
+                  Aqueduct 3.0
+                </Th>
+                <Th
+                  sorted={sortBy === 'nDGAIN'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('nDGAIN', true)}
+                >
+                  ND-GAIN
+                </Th>
+                <Th
+                  sorted={sortBy === 'pressFreedomIndex'}
+                  reversed={reverseSortDirection}
+                  onSort={() => setSorting('pressFreedomIndex', true)}
+                >
+                  Press Freedom Index
+                </Th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.length > 0 ? (
+                rows
+              ) : (
+                <tr>
+                  <td colSpan={Object.keys(data[0]).length}>
+                    <Text weight={500} align="center">
+                      Nothing found
+                    </Text>
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </Table>
+        </ScrollArea.Autosize>
+      </Paper>
     </ScrollArea>
   );
 }

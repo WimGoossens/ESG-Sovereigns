@@ -80,7 +80,7 @@ export function HeroTitle() {
         </h1>
 
         <Text className={classes.description} color="dimmed">
-          What effect do ESG criteria have on your country exposures? Find out using StateScreen!
+          What effect do ESG criteria have on your country exposures? Find out using our world map!
         </Text>
 
         <Group className={classes.controls}>

@@ -9,6 +9,8 @@ import {
   Drawer,
   ScrollArea,
   rem,
+  Image,
+  Title
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
@@ -84,10 +86,15 @@ export function HeaderMegaMenu() {
     <Box pb={120}>
       <Header height={60} px="md" fixed={true}>
         <Group position="apart" sx={{ height: '100%' }}>
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <MantineLogo size={30}/>
-          </Link>
-          <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Group>
+              <Image src={require('../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
+              <Title order={2} color="#44b5af">
+                govvies.info
+              </Title>
+            </Group>
+            </Link>
+          <Group position="center" sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
             <Link to="/" style={{ textDecoration: 'none' }} className={classes.link}>
               Home
             </Link>
@@ -99,7 +106,7 @@ export function HeaderMegaMenu() {
             </Link>
           </Group>
 
-          <Group className={classes.hiddenMobile}>
+          <Group position="right" className={classes.hiddenMobile}>
             <ActionToggle />
               <Link to="/map" style={{ textDecoration: 'none' }}>
                 <Button radius="xl" h={30}>
