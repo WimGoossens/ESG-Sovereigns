@@ -1,5 +1,7 @@
 import { useMantineColorScheme, ActionIcon, Group } from '@mantine/core';
-import { IconSun, IconMoonStars } from '@tabler/icons-react';
+import { LuSun,
+  LuMoonStar
+} from "react-icons/lu";
 
 export function ActionToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -15,7 +17,7 @@ export function ActionToggle() {
           color: theme.colorScheme === 'dark' ? theme.colors.govvies[7] : theme.colors.govvies[4],
         })}
       >
-        {colorScheme === 'dark' ? <IconSun size="1.2rem" /> : <IconMoonStars size="1.2rem" />}
+        {colorScheme === 'dark' ? <LuSun size="1.2rem" /> : <LuMoonStar size="1.2rem" />}
       </ActionIcon>
     </Group>
   );

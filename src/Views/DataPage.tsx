@@ -1,21 +1,17 @@
-import HeroTitle from "../Components/HeroTitle";
-import SectionOne from '../Components/SectionOne';
+import HeroTitle from "../Components/AboutTitle";
+import SectionOne from '../Components/Features';
 import SectionTwo from '../Components/SectionTwo';
 import SectionThree from '../Components/SectionThree';
-import SectionFour from '../Components/SectionFour';
-import SectionFive from '../Components/SectionFive';
+import DataDescription from '../Components/DataDescription';
+import DataIntro from '../Components/DataIntro';
 import MapChart from '../Components/MapChart';
 
 const DataPage = () => {
     return (
         <>
+            <DataIntro />
 
-            <SectionFour />
-
-            <SectionFive />
-
-            {/* <MapChart /> */}
-
+            <DataDescription />
         </>
     )
 };

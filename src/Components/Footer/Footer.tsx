@@ -1,6 +1,5 @@
-import { createStyles, Text, Container, ActionIcon, Group, rem, Image, Title } from '@mantine/core';
+import { createStyles, Text, Container, ActionIcon, Group, rem, Image } from '@mantine/core';
 import { IconBrandLinkedin } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
 import { Link } from 'react-router-dom';
 import { useWindowScroll } from '@mantine/hooks';
 
@@ -114,12 +113,11 @@ export function Footer({ data }: FooterLinksProps) {
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Link to={link.link} style={{ textDecoration: 'none' }} >
+      <Link to={link.link} style={{ textDecoration: 'none' }} onClick={() => scrollTo({ y: 0 })}>
       <Text<'a'>
         key={index}
         className={classes.link}
         component="a"
-        onClick={() => scrollTo({ y: 0 })}
       >
         {link.label}
       </Text>
@@ -137,23 +135,17 @@ export function Footer({ data }: FooterLinksProps) {
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
-        {/* <div className={classes.logo}> */}
           <Group  position="center">
           <Image src={require('../../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
-            {/* <Title order={2} color="#44b5af">
-              govvies.info
-            </Title> */}
-          
           <Text size="xs" color="dimmed" className={classes.description}>
             ESG insights for sovereign exposures. Made easy.
           </Text>
           </Group>
-        {/* </div> */}
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2022. All rights reserved.
+          © 2023. All rights reserved.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>

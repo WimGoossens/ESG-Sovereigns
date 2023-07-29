@@ -7,7 +7,7 @@ import {
 } from "react-simple-maps";
 
 import { Tooltip } from '@mantine/core';
-import WorldMap from './features.json';
+import WorldMap from './countries.json';
 
 interface RowData {
     country: string;
@@ -35,45 +35,45 @@ function MapChart({ data }: TableSortProps) {
 
     const geographyStyleInsufficientData = {
         default: {
-            fill: "#adb5bd",
+            fill: "#C7D2C7",
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         },
         hover: {
-            fill: '#22b8cf',
+            fill: '#DDE4DD',
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         }
       };
 
       const geographyStyleEligible = {
         default: {
-            fill: "#94d82d",
+            fill: "#3C9892",
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         },
         hover: {
-            fill: '#22b8cf',
+            fill: '#50B9B2',
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         }
       };
 
       const geographyStyleIneligible = {
         default: {
-            fill: "#ff6b6b",
+            fill: "#B2572A",
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         },
         hover: {
-            fill: '#22b8cf',
+            fill: '#D06B39',
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         }
       };
@@ -82,13 +82,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "url(#insufficientYes)",
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         },
         hover: {
-            fill: '#22b8cf',
+            fill: 'url(#insufficientYesHover)',
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         }
       };
@@ -97,13 +97,13 @@ function MapChart({ data }: TableSortProps) {
         default: {
             fill: "url(#insufficientNo)",
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         },
         hover: {
-            fill: '#22b8cf',
+            fill: 'url(#insufficientNoHover)',
             transition: "all 250ms",
-            stroke: "#A6A7AB",
+            stroke: "#000000",
             strokeWidth: 0.25
         }
     };
@@ -138,13 +138,23 @@ function MapChart({ data }: TableSortProps) {
                 height={mapHeight}
             >
                 <pattern id="insufficientYes" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#94d82d" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#adb5bd" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#3C9892" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" stroke-width="2" />
                 </pattern>
 
                 <pattern id="insufficientNo" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#ff6b6b" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#adb5bd" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#B2572A" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" stroke-width="2" />
+                </pattern>
+
+                <pattern id="insufficientYesHover" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#50B9B2" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" stroke-width="2" />
+                </pattern>
+
+                <pattern id="insufficientNoHover" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#D06B39" stroke-width="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" stroke-width="2" />
                 </pattern>
 
                 <ZoomableGroup
@@ -153,7 +163,7 @@ function MapChart({ data }: TableSortProps) {
                     minZoom={0.6}
                     maxZoom={10}
                 >
-                <Tooltip.Floating label={tooltipContent} color="#A6A7AB">
+                <Tooltip.Floating label={tooltipContent} color="#000000">
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
                             geographies.map((geo) => (

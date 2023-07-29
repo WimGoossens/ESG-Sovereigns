@@ -1,5 +1,3 @@
-import { Header } from "@mantine/core";
-import { Children } from "react";
 import { RouteObject } from "react-router-dom";
 import App from "../../App";
 import HomePage from '../../Views/HomePage';

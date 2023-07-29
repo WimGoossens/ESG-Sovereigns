@@ -1,10 +1,11 @@
-import { Grid, Skeleton, Container, Box, Paper, LoadingOverlay } from '@mantine/core';
+import { Grid, Container, Paper } from '@mantine/core';
 import MapChart from '../Components/MapChart';
 import Filters from './Filters';
 import { useState } from 'react';
 import CountryTable from './CountryTable';
 
-import CountryData from './Dataset3.json';
+import CountryData from './Data/Dataset.json';
+import Maplegend from './MapLegend';
 
 interface RowData {
   country: string;
@@ -39,7 +40,7 @@ function Dashboard() {
   const [womenBusinessAndTheLawRangeValue, setWomenBusinessAndTheLawRangeValue] = useState<[number, number]>([0, 100]);
   const [humanCapitalIndexRangeValue, setHumanCapitalIndexRangeValue] = useState<[number, number]>([0, 1]);
   const [fragileStatesIndexRangeValue, setFragileStatesIndexRangeValue] = useState<[number, number]>([0, 120]);
-  const [worldRiskIndexRangeValue, setWorldRiskIndexRangeValue] = useState<[number, number]>([0, 100]);
+  const [worldRiskIndexRangeValue, setWorldRiskIndexRangeValue] = useState<[number, number]>([0, 50]);
   const [environmentalPerformanceIndexRangeValue, setEnvironmentalPerformanceIndexRangeValue] = useState<[number, number]>([0, 100]);
   const [aqueduct3RangeValue, setAqueduct3RangeValue] = useState<[number, number]>([0, 7]);
   const [nDGAINRangeValue, setNDGAINRangeValue] = useState<[number, number]>([0, 100]);
@@ -236,6 +237,9 @@ function Dashboard() {
             <MapChart 
               data={CountryData}
             />
+          </Paper>
+          <Paper>
+            <Maplegend />
           </Paper>
         </Grid.Col>
         <Grid.Col xs={10}>

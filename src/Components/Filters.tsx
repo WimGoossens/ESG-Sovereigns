@@ -35,6 +35,8 @@ interface FilterStatus {
     setRangeValuePressFreedomIndex: (newType: [number, number]) => void;
 }
 
+
+
 function Filters( status : FilterStatus ) {
     return (
         <Accordion variant="contained" multiple={true} defaultValue={['sanctions']}>
@@ -229,11 +231,11 @@ function Filters( status : FilterStatus ) {
                     rangeValue={status.rangeValueCorruptionPerceptionIndex}
                     setRangeValue={status.setRangeValueCorruptionPerceptionIndex}
                     marks={[
-                        { value: 0, label: '0%' },
+                        { value: 0, label: '0' },
                         // { value: 25, label: '25%' },
                         // { value: 50, label: '50%' },
                         // { value: 75, label: '75%' },
-                        { value: 100, label: '100%' },
+                        { value: 100, label: '100' },
                     ]}
                     description={
                         "Provides perceptions by businesspeople and country experts of levels of corruption in the public sector."

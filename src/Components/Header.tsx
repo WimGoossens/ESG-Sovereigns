@@ -12,9 +12,8 @@ import {
   Image,
   Title
 } from '@mantine/core';
-import { MantineLogo } from '@mantine/ds';
-import { useDisclosure } from '@mantine/hooks';
-import {ActionToggle} from './ColorSwitch';
+import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import { ActionToggle } from './ColorSwitch';
 import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
@@ -81,12 +80,18 @@ const useStyles = createStyles((theme) => ({
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const { classes, theme } = useStyles();
+  const [scroll, scrollTo] = useWindowScroll();
+
+  const buttonHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    scrollTo({ y: 0 });
+    toggleDrawer();
+  };
 
   return (
     <Box pb={120}>
       <Header height={60} px="md" fixed={true}>
         <Group position="apart" sx={{ height: '100%' }}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none' }} onClick={() => scrollTo({ y: 0 })}>
             <Group>
               <Image src={require('../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
               <Title order={2} color="govvies.0" fw={400}>
@@ -95,21 +100,21 @@ export function HeaderMegaMenu() {
             </Group>
             </Link>
           <Group position="center" sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link}>
+            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link} onClick={() => scrollTo({ y: 0 })}>
               Home
             </Link>
-            <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link}>
+            <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link} onClick={() => scrollTo({ y: 0 })}>
               Data
             </Link>
-            <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link}>
+            <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link} onClick={() => scrollTo({ y: 0 })}>
               About
             </Link>
           </Group>
 
           <Group position="right" className={classes.hiddenMobile}>
             <ActionToggle/>
-            <Link to="/map">
-              <Button radius="xl" h={30} color="govvies.0" >
+            <Link to="/map" onClick={() => scrollTo({ y: 0 })}>
+              <Button radius="xl" h={30} color="govvies.0">
                 Go to world map
               </Button>
             </Link>
@@ -135,19 +140,19 @@ export function HeaderMegaMenu() {
       >
         <ScrollArea h={`calc(70vh - ${rem(60)})`} mx="md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
+            <Link to="/" style={{ textDecoration: 'none' }} className={classes.link} onClick={buttonHandler}>
               Home
             </Link>
-          <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
+          <Link to="/data" style={{ textDecoration: 'none' }} className={classes.link} onClick={buttonHandler}>
             Data
           </Link>
-          <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link} onClick={toggleDrawer}>
+          <Link to="/about" style={{ textDecoration: 'none' }} className={classes.link} onClick={buttonHandler}>
             About
           </Link>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-            <Link to="/map" style={{ textDecoration: 'none' }} onClick={toggleDrawer}>
-              <Button radius="xl" h={30}>
+            <Link to="/map" style={{ textDecoration: 'none' }} onClick={buttonHandler}>
+              <Button radius="xl" h={30} color="govvies.0">
                   Go to world map
               </Button>
             </Link>

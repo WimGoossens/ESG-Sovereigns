@@ -1,10 +1,9 @@
-import HeroTitle from "../Components/HeroTitle";
-import { HeroText } from "../Components/HeroTitle copy";
-import SectionOne from '../Components/SectionOne';
-import SectionTwo from '../Components/SectionTwo';
-import SectionThree from '../Components/SectionThree';
-import SectionFour from '../Components/SectionFour';
-import SectionFive from '../Components/SectionFive';
+import { HeroText } from "../Components/HeroTitle";
+import FeaturesImages from '../Components/Features';
+import FrequentlyAskedQuestions from '../Components/FrequentlyAskedQuestions';
+
+import featuresJSON from '../Components/features.json';
+import FeaturesTitle from "../Components/FeaturesData";
 
 const HomePage = () => {
     return (
@@ -13,15 +12,21 @@ const HomePage = () => {
 
             <HeroText />
 
-            <SectionOne />
+            {/* <FeaturesImages
+                supTitle={featuresJSON.props.supTitle}
+                description={featuresJSON.props.description}
+                data={featuresJSON.props.data}
+            /> */}
 
-            <SectionTwo />
+            <FeaturesTitle/>
+
+            {/* <SectionTwo />
 
             <SectionThree />
 
-            <SectionFour />
+            <SectionFour /> */}
 
-            <SectionFive />
+            <FrequentlyAskedQuestions />
 
         </>
     )

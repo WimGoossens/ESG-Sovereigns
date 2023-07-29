@@ -1,103 +1,136 @@
-import { createStyles, Container, Text, Button, Group, rem } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, rem } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
+
 import { Link } from "react-router-dom";
+import { Dots } from './Dots';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    boxSizing: 'border-box',
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
+    paddingTop: rem(120),
+    paddingBottom: rem(80),
+
+    [theme.fn.smallerThan('sm')]: {
+      paddingTop: rem(80),
+      paddingBottom: rem(60),
+    },
   },
 
   inner: {
     position: 'relative',
-    // paddingTop: rem(200),
-    paddingBottom: rem(120),
+    zIndex: 1,
+  },
+
+  dots: {
+    position: 'absolute',
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
 
     [theme.fn.smallerThan('sm')]: {
-      paddingBottom: rem(80),
-      paddingTop: rem(80),
+      display: 'none',
     },
+  },
+
+  dotsLeft: {
+    left: 0,
+    top: 0,
   },
 
   title: {
-    // fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: rem(62),
-    fontWeight: 900,
-    lineHeight: 1.1,
-    margin: 0,
-    padding: 0,
+    textAlign: 'center',
+    fontWeight: 800,
+    fontSize: rem(40),
+    letterSpacing: -1,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    marginBottom: theme.spacing.xs,
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: rem(42),
-      lineHeight: 1.2,
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: rem(28),
+      textAlign: 'left',
     },
   },
 
-  description: {
-    marginTop: theme.spacing.xl,
-    fontSize: rem(24),
+  highlight: {
+    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6],
+  },
 
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: rem(18),
+  description: {
+    textAlign: 'center',
+
+    [theme.fn.smallerThan('xs')]: {
+      textAlign: 'left',
+      fontSize: theme.fontSizes.md,
     },
   },
 
   controls: {
-    marginTop: `calc(${theme.spacing.xl} * 2)`,
+    marginTop: theme.spacing.lg,
+    display: 'flex',
+    justifyContent: 'center',
 
-    [theme.fn.smallerThan('sm')]: {
-      marginTop: theme.spacing.xl,
+    [theme.fn.smallerThan('xs')]: {
+      flexDirection: 'column',
     },
   },
 
   control: {
-    height: rem(54),
-    paddingLeft: rem(38),
-    paddingRight: rem(38),
+    '&:not(:first-of-type)': {
+      marginLeft: theme.spacing.md,
+    },
 
-    [theme.fn.smallerThan('sm')]: {
-      height: rem(54),
-      paddingLeft: rem(18),
-      paddingRight: rem(18),
-      flex: 1,
+    [theme.fn.smallerThan('xs')]: {
+      height: rem(42),
+      fontSize: theme.fontSizes.md,
+
+      '&:not(:first-of-type)': {
+        marginTop: theme.spacing.md,
+        marginLeft: 0,
+      },
     },
   },
 }));
 
-export function HeroTitle() {
+export function HeroText() {
   const { classes } = useStyles();
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
-    <div className={classes.wrapper}>
-      <Container size={700} className={classes.inner}>
-        <h1 className={classes.title}>
+    <Container className={classes.wrapper} size={1400}>
+      <Dots className={classes.dots} style={{ left: 0, top: 0 }} />
+      <Dots className={classes.dots} style={{ left: 60, top: 0 }} />
+      <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
+      <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
+
+      <div className={classes.inner}>
+      <Container size={800} className={classes.inner}>
+        <Title className={classes.title}>
           Discover the impact of {' '}
-          <Text component="span" variant="gradient" gradient={{ from: 'yellow.5', to: 'yellow.9' }} inherit>
+          <Text component="span" variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.4' }} inherit>
             ESG criteria
           </Text>{' '}
           on global exposures
-        </h1>
+        </Title>
 
-        <Text className={classes.description} color="dimmed">
-          What effect do ESG criteria have on your country exposures? Find out using our world map!
-        </Text>
+        {/* <Container p={0} size={600}> */}
+          <Text size="lg" color="dimmed" className={classes.description}>
+          What effect do Environmental, Social and Governance (ESG) criteria have on your country exposures? Find out using our world map!
+          </Text>
+        </Container>
 
-        <Group className={classes.controls}>
-          <Link to="/map" style={{ textDecoration: 'none' }}>
+        <div className={classes.controls}>
+        <Link to="/map" style={{ textDecoration: 'none' }}>
             <Button
               size="xl"
               className={classes.control}
               variant="gradient"
-              gradient={{ from: 'yellow.5', to: 'yellow.9' }}
+              gradient={{ from: 'govvies.0', to: 'govvies.4' }}
+              onClick={() => scrollTo({ y: 0 })}
             >
-              Go to world map
+              Get started
             </Button>
           </Link>
-        </Group>
-      </Container>
-    </div>
+        </div>
+      </div>
+    </Container>
   );
 }
-
-export default HeroTitle;

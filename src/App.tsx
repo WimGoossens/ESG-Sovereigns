@@ -15,7 +15,7 @@ function App() {
       <MantineProvider theme={{
             colorScheme:colorScheme,
             loader: 'bars',
-            // primaryColor: 'orange',
+            // primaryColor: '#58ACAA',
             fontFamily: 'Roboto',
             defaultRadius: 5,
             colors: {
