@@ -18,8 +18,8 @@
         {
             "title": "Legal",
             "links": [
-              { "label": "Privacy Policy", "link": "#" },
-              { "label": "Terms & Conditions", "link": "#" }
+              { "label": "Privacy Policy", "link": "/privacy-policy" },
+              { "label": "Terms & Conditions", "link": "/terms-and-conditions" }
             ]
           }
       ]

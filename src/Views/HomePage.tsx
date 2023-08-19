@@ -1,8 +1,6 @@
 import { HeroText } from "../Components/HeroTitle";
-import FeaturesImages from '../Components/Features';
 import FrequentlyAskedQuestions from '../Components/FrequentlyAskedQuestions';
 
-import featuresJSON from '../Components/features.json';
 import FeaturesTitle from "../Components/FeaturesData";
 
 const HomePage = () => {

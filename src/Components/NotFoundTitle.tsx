@@ -1,4 +1,4 @@
-import { createStyles, Title, Text, Button, Container, Group, rem } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, Group, rem, useMantineTheme, Space } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
@@ -88,23 +88,45 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function NotFoundTitle() {
-  const { classes, theme } = useStyles();
+  // const { classes, theme } = useStyles();
+  const theme = useMantineTheme();
 
   return (
-    <Container className={classes.wrapper}>
-        <div className={classes.label}>404</div>
-        <Title className={classes.title}>You have found a secret place.</Title>
-        <Text color="dimmed" size="lg" align="center" className={classes.description}>
+    <Container >
+      <Text
+        align="center"
+        weight={900}
+        size={rem(220)}
+        color={theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]}>
+        404
+      </Text>
+        {/* <div className={classes.label}>404</div> */}
+        <Title order={1} align="center">
+          You have found a secret place.
+        </Title>
+        <Space h="xl"/>
+        <Text color="dimmed" size="lg" align="center">
           The page you are trying to open does not exist. You may have mistyped the address, 
           or the page has been moved to another URL. If you think this is an error, please contact support.
         </Text>
+        <Space h="xl"/>
         <Group position="center">
           <Link to="/" style={{ textDecoration: 'none' }}>
-            <Button variant="subtle" size="md">
+            <Button variant="subtle" size="md" color='govvies.4'>
               Take me back to home page
             </Button>
           </Link>
         </Group>
+        {/* <Text c="govvies.0">0</Text>
+        <Text c="govvies.1">1</Text>
+        <Text c="govvies.2">2</Text>
+        <Text c="govvies.3">3</Text>
+        <Text c="govvies.4">4</Text>
+        <Text c="govvies.5">5</Text>
+        <Text c="govvies.6">6</Text>
+        <Text c="govvies.7">7</Text>
+        <Text c="govvies.8">8</Text>
+        <Text c="govvies.9">9</Text> */}
     </Container>
   );
 }

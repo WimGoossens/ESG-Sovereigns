@@ -5,6 +5,8 @@ import MapPage from '../../Views/MapPage';
 import AboutPage from '../../Views/AboutPage';
 import DataPage from '../../Views/DataPage';
 import NotFoundPage from '../../Views/NotFoundPage';
+import PrivacyPolicyPage from "../../Views/PrivacyPolicyPage";
+import TermsAndConditionsPage from "../../Views/TermsAndConditionsPage";
 
 const routes: RouteObject[] = [
   {
@@ -14,6 +16,8 @@ const routes: RouteObject[] = [
       { path: "data", element: <DataPage /> },
       { path: "map", element: <MapPage /> },
       { path: "about", element: <AboutPage /> },
+      { path: "privacy-policy", element: <PrivacyPolicyPage /> },
+      { path: "terms-and-conditions", element: <TermsAndConditionsPage /> },
       { path: "*", element: <NotFoundPage /> }
     
     ]

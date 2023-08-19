@@ -49,7 +49,7 @@ import {
     {
       icon: LuXOctagon,
       title: 'Sanctions',
-      description: "Sanctions can be used to change the behaviour of a country or regime, in cases where they are violating human rights, waging war or endangering international peace and security.",
+      description: "Sanctions can be imposed on countries or regimes, in cases where they are violating human rights, waging war or endangering international peace and security.",
     },
   ];
   
@@ -63,7 +63,7 @@ import {
           size={44}
           radius="md"
           variant="gradient"
-          gradient={{ deg: 133, from: 'govvies.4', to: 'govvies.5' }}
+          gradient={{ deg: 133, from: 'govvies.5', to: 'govvies.5' }}
         >
           <feature.icon size={rem(26)} />
         </ThemeIcon>
@@ -82,7 +82,7 @@ import {
         <Grid gutter={80}>
           <Col span={12} md={5}>
             <Title className={classes.title} order={2}>
-              Because ESG matters for countries too
+              Because ESG has impact on sovereigns too
             </Title>
             <Text c="dimmed">
               By using ESG information about sovereigns, you are able to spot sustainability risks and opportunities more easily.

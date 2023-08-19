@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 export function AboutPerson() {
 
   return (
-      <Container size={700}>
-        <Grid grow align="center">
-            <Grid.Col span={2}>
+      <Container size={1000}>
+        <Grid grow align="center" justify="center">
+            <Grid.Col xl={2} lg={2} md={2} sm={3} xs={6}>
                 <Image
                     src={require('../Images/wim.jpg')}
                     alt="Wim Goossens"
                     radius="xl"
                     withPlaceholder/>
             </Grid.Col>
-            <Grid.Col span={7}>
+            <Grid.Col xl={7} lg={6} md={5} sm={4} xs={3}>
               <Text>
                 My name is Wim Goossens and I am passionate about sustainability and ESG investing in particular. 
                 I have a background in Econometrics and Operations Research and graduated from the University of Groningen. 
@@ -27,9 +27,9 @@ export function AboutPerson() {
               </Text>
               <Space h="md"/>
               <Text fs="italic">
-                Disclaimer: any views expressed on this website are mine and not necessarily the same as those of the De Nederlandsche Bank.
+                Disclaimer: any views expressed on this website are mine and not necessarily the same as those of my employer.
               </Text>
-              <Text c="govvies.0">0aaaaaaaaaaaaaaaaaaaaa</Text>
+              {/* <Text c="govvies.0">0aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.1">1aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.2">2aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.3">3aaaaaaaaaaaaaaaaaaaaa</Text>
@@ -38,7 +38,7 @@ export function AboutPerson() {
               <Text c="govvies.6">6aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.7">7aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.8">8aaaaaaaaaaaaaaaaaaaaa</Text>
-              <Text c="govvies.9">9aaaaaaaaaaaaaaaaaaaaa</Text>
+              <Text c="govvies.9">9aaaaaaaaaaaaaaaaaaaaa</Text> */}
             </Grid.Col>
         </Grid>
 
