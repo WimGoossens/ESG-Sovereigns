@@ -105,7 +105,7 @@ export function HeroText() {
       <Container size={800} className={classes.inner}>
         <Title className={classes.title}>
           Discover the impact of {' '}
-          <Text component="span" variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.4' }} inherit>
+          <Text component="span" variant="gradient" gradient={{ from: 'govvies.0', to: 'govvies.4' }} inherit>
             ESG criteria
           </Text>{' '}
           on global exposures
@@ -118,17 +118,19 @@ export function HeroText() {
         </Container>
 
         <div className={classes.controls}>
+        <Container size={800} className={classes.inner}>
         <Link to="/map" style={{ textDecoration: 'none' }}>
             <Button
               size="xl"
               className={classes.control}
               variant="gradient"
-              gradient={{ from: 'govvies.0', to: 'govvies.4' }}
+              gradient={{ from: 'govvies.7', to: 'govvies.5' }}
               onClick={() => scrollTo({ y: 0 })}
             >
               Get started
             </Button>
           </Link>
+          </Container>
         </div>
       </div>
     </Container>

@@ -24,6 +24,7 @@ import {
       padding: theme.spacing.xs,
       marginRight: theme.spacing.md,
       backgroundColor: theme.colors.govvies[5],
+      // gradient={{ from: 'govvies.4', to: 'govvies.5' }},
     },
   
     itemTitle: {
@@ -77,7 +78,8 @@ import {
   
     const items = data.map((item) => (
       <div className={classes.item} key={item.image}>
-        <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md">
+        {/* <ThemeIcon variant="gradient" className={classes.itemIcon} size={60} radius="md" gradient={{ from: 'govvies.1', to: 'govvies.5' }}> */}
+        <ThemeIcon variant="gradient" gradient={{ from: 'govvies.1', to: 'govvies.5' }}>
           <Image src={IMAGES[item.image]} />
         </ThemeIcon>
   

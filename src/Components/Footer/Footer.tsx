@@ -112,10 +112,10 @@ export function Footer({ data }: FooterLinksProps) {
   const [scroll, scrollTo] = useWindowScroll();
 
   const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
+    const links = group.links.map((link, label) => (
       <Link to={link.link} style={{ textDecoration: 'none' }} onClick={() => scrollTo({ y: 0 })}>
       <Text<'a'>
-        key={index}
+        key={label}
         className={classes.link}
         component="a"
       >

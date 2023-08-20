@@ -74,7 +74,7 @@ const FrequentlyAskedQuestions = () => {
                             How can we reach you?
                         </Accordion.Control>
                         <Accordion.Panel>
-                            Reach out to me via <a href="https://www.linkedin.com/in/wimgoossens93/" target="_blank">LinkedIn</a>.
+                            Reach out to me via <a href="https://www.linkedin.com/in/wimgoossens93/" target="_blank" rel="noreferrer">LinkedIn</a>.
                         </Accordion.Panel>
                     </Accordion.Item>
                 </Accordion>

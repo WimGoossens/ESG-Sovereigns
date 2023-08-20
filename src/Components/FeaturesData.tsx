@@ -10,7 +10,7 @@ import {
     rem,
     Container,
   } from '@mantine/core';
-  import { LuLeaf, LuLandmark, LuHeartHandshake, LuScale, LuXOctagon } from 'react-icons/lu';
+  import { LuLeaf, LuLandmark, LuHeartHandshake, LuXOctagon } from 'react-icons/lu';
   import { Link } from 'react-router-dom';
   import { useWindowScroll } from '@mantine/hooks';
 
@@ -27,6 +27,22 @@ import {
       lineHeight: 1.1,
       marginBottom: theme.spacing.md,
       color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    },
+
+    control: {
+      '&:not(:first-of-type)': {
+        marginLeft: theme.spacing.md,
+      },
+  
+      [theme.fn.smallerThan('xs')]: {
+        height: rem(42),
+        fontSize: theme.fontSizes.md,
+  
+        '&:not(:first-of-type)': {
+          marginTop: theme.spacing.md,
+          marginLeft: 0,
+        },
+      },
     },
   }));
   
@@ -63,7 +79,7 @@ import {
           size={44}
           radius="md"
           variant="gradient"
-          gradient={{ deg: 133, from: 'govvies.5', to: 'govvies.5' }}
+          gradient={{ deg: 0, from: 'govvies.4', to: 'govvies.0' }}
         >
           <feature.icon size={rem(26)} />
         </ThemeIcon>
@@ -90,6 +106,17 @@ import {
 
             <Link to="/data" style={{ textDecoration: 'none' }} onClick={() => scrollTo({ y: 0 })}>
             <Button
+              size="sm"
+              radius="md"
+              mt="xl"
+              className={classes.control}
+              variant="gradient"
+              gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              onClick={() => scrollTo({ y: 0 })}
+            >
+              Data description
+            </Button>
+            {/* <Button
               variant="gradient"
               gradient={{ deg: 133, from: 'govvies.0', to: 'govvies.4' }}
               size="lg"
@@ -97,7 +124,7 @@ import {
               mt="xl"
             >
               Data description
-            </Button>
+            </Button> */}
             </Link>
           </Col>
           <Col span={12} md={7}>

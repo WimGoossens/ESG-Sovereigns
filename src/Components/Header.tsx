@@ -114,7 +114,7 @@ export function HeaderMegaMenu() {
           <Group position="right" className={classes.hiddenMobile}>
             <ActionToggle/>
             <Link to="/map" onClick={() => scrollTo({ y: 0 })}>
-              <Button radius="xl" h={30} color="govvies.0">
+              <Button variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.5' }} radius="xl" h={30}>
                 Go to world map
               </Button>
             </Link>

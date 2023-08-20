@@ -138,23 +138,23 @@ function MapChart({ data }: TableSortProps) {
                 height={mapHeight}
             >
                 <pattern id="insufficientYes" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#3C9892" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#3C9892" strokeWidth="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" strokeWidth="2" />
                 </pattern>
 
                 <pattern id="insufficientNo" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#B2572A" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#B2572A" strokeWidth="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#C7D2C7" strokeWidth="2" />
                 </pattern>
 
                 <pattern id="insufficientYesHover" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#50B9B2" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#50B9B2" strokeWidth="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" strokeWidth="2" />
                 </pattern>
 
                 <pattern id="insufficientNoHover" width="2" height="2" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" fill="#adb5bd">
-                    <line x1="0" y1="0" x2="0" y2="2" stroke="#D06B39" stroke-width="2" />
-                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" stroke-width="2" />
+                    <line x1="0" y1="0" x2="0" y2="2" stroke="#D06B39" strokeWidth="2" />
+                    <line x1="2" y1="0" x2="2" y2="2" stroke="#DDE4DD" strokeWidth="2" />
                 </pattern>
 
                 <ZoomableGroup
@@ -170,7 +170,7 @@ function MapChart({ data }: TableSortProps) {
                                 <Geography
                                     key={geo.rsmKey}
                                     geography={geo}
-                                    style={geographyStyler(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)))}
+                                    style={geographyStyler(String(data.filter(data => data.alpha3 === geo.id).map((res) => res.eligible)))}
                                     
                                     
                                     // {(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'Yes') ? geographyStyleEligible : 
@@ -179,7 +179,7 @@ function MapChart({ data }: TableSortProps) {
                                     //     ((String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)) == 'No') ? geographyStyleIneligible) : geographyStyleInsufficientData)
                                     // }
                                     onMouseEnter={() => {
-                                        setTooltipContent(`${geo.properties.name} - ${(String(data.filter(data => data.alpha3 == geo.id).map((res) => res.eligible)))}`);
+                                        setTooltipContent(`${geo.properties.name} - ${(String(data.filter(data => data.alpha3 === geo.id).map((res) => res.eligible)))}`);
                                     }}
                                     onMouseLeave={onMouseLeave}
                                 />
