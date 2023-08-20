@@ -113,13 +113,13 @@ function MapChart({ data }: TableSortProps) {
 
     function geographyStyler(eligibility: String) {
         switch(eligibility) {
-            case "Yes":
+            case "Eligible":
                 return geographyStyleEligible;
-            case "Yes*":
+            case "Eligible*":
                 return geographyStyleInsufficientEligible;
-            case "No":
+            case "Ineligible":
                 return geographyStyleIneligible;
-            case "No*":
+            case "Ineligible*":
                 return geographyStyleInsufficientIneligible;
             default:
                 return geographyStyleInsufficientData;

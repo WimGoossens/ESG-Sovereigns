@@ -53,7 +53,7 @@ function Dashboard() {
   function checkEligibility(country: Object) {
     if((checkedUNSanctions && typeof CountryData[i].sanctionsUN === 'string') ||
     (checkedEUSanctions && typeof CountryData[i].sanctionsEU === 'string')){
-      return "No";
+      return "Ineligible";
     } else if (
       (typeof CountryData[i].ecologicalFootprint != 'number') &&
       (typeof CountryData[i].freedomInTheWorldScore != 'number') &&
@@ -113,80 +113,80 @@ function Dashboard() {
         (Number(CountryData[i].pressFreedomIndex) < pressFreedomIndexRangeValue[0]) ||
         (Number(CountryData[i].pressFreedomIndex) > pressFreedomIndexRangeValue[1])
       ){
-        return "No";
+        return "Ineligible";
       } else {
-        return "Yes";
+        return "Eligible";
       }
     } else if (
       (Number(CountryData[i].ecologicalFootprint) < ecologicalFootprintRangeValue[0]) ||
       (Number(CountryData[i].ecologicalFootprint) > ecologicalFootprintRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].freedomInTheWorldScore) < freedomInTheWorldScoreRangeValue[0]) ||
       (Number(CountryData[i].freedomInTheWorldScore) > freedomInTheWorldScoreRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].globalPeaceIndex) < globalPeaceIndexRangeValue[0]) ||
       (Number(CountryData[i].globalPeaceIndex) > globalPeaceIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].humanDevelopmentIndex) < humanDevelopmentIndexRangeValue[0]) ||
       (Number(CountryData[i].humanDevelopmentIndex) > humanDevelopmentIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].womenBusinessAndTheLaw) < womenBusinessAndTheLawRangeValue[0]) ||
       (Number(CountryData[i].womenBusinessAndTheLaw) > womenBusinessAndTheLawRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].humanCapitalIndex) < humanCapitalIndexRangeValue[0]) ||
       (Number(CountryData[i].humanCapitalIndex) > humanCapitalIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].fragileStatesIndex) < fragileStatesIndexRangeValue[0]) ||
       (Number(CountryData[i].fragileStatesIndex) > fragileStatesIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].worldRiskIndex) < worldRiskIndexRangeValue[0]) ||
       (Number(CountryData[i].worldRiskIndex) > worldRiskIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].environmentalPerformanceIndex) < environmentalPerformanceIndexRangeValue[0]) ||
       (Number(CountryData[i].environmentalPerformanceIndex) > environmentalPerformanceIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].aqueduct3) < aqueduct3RangeValue[0]) ||
       (Number(CountryData[i].aqueduct3) > aqueduct3RangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].nDGAIN) < nDGAINRangeValue[0]) ||
        (Number(CountryData[i].nDGAIN) > nDGAINRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].corruptionPerceptionIndex) < corruptionPerceptionIndexRangeValue[0]) ||
       (Number(CountryData[i].corruptionPerceptionIndex) > corruptionPerceptionIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } else if (
       (Number(CountryData[i].pressFreedomIndex) < pressFreedomIndexRangeValue[0]) ||
       (Number(CountryData[i].pressFreedomIndex) > pressFreedomIndexRangeValue[1])
     ) {
-      return "No*";
+      return "Ineligible*";
     } 
     
     
     else {
-      return "Yes*";
+      return "Eligible*";
     }
   }
 

@@ -280,7 +280,7 @@ function CountryTable({ data }: TableSortProps) {
                   reversed={reverseSortDirection}
                   onSort={() => setSorting('eligible')}
                 >
-                  Eligible
+                  Eligibility
                 </Th>
                 <Th
                   sorted={sortBy === 'sanctionsUN'}
