@@ -1,4 +1,4 @@
-# [Simple Mantine Template](https://mantinetemplate.netlify.app/)
+# [govvies.info](https://www.govvies.info)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GitHub issues](https://img.shields.io/github/issues/Giuseppetm/mantine-template)](https://github.com/Giuseppetm/mantine-template/issues/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d49e09ba-8ab5-45e0-911e-7f2b5e0daecb/deploy-status)](https://app.netlify.com/sites/mantinetemplate/deploys)
