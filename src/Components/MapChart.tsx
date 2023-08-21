@@ -38,13 +38,18 @@ function MapChart({ data }: TableSortProps) {
             fill: "#C7D2C7",
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
         },
         hover: {
             fill: '#DDE4DD',
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
+        },
+        pressed: {
+            outline: 'none'
         }
       };
 
@@ -53,13 +58,18 @@ function MapChart({ data }: TableSortProps) {
             fill: "#3C9892",
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
         },
         hover: {
             fill: '#50B9B2',
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
+        },
+        pressed: {
+            outline: 'none'
         }
       };
 
@@ -68,13 +78,18 @@ function MapChart({ data }: TableSortProps) {
             fill: "#B2572A",
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
         },
         hover: {
             fill: '#D06B39',
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
+        },
+        pressed: {
+            outline: 'none'
         }
       };
 
@@ -83,13 +98,18 @@ function MapChart({ data }: TableSortProps) {
             fill: "url(#insufficientYes)",
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
         },
         hover: {
             fill: 'url(#insufficientYesHover)',
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
+        },
+        pressed: {
+            outline: 'none'
         }
       };
 
@@ -98,13 +118,18 @@ function MapChart({ data }: TableSortProps) {
             fill: "url(#insufficientNo)",
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
         },
         hover: {
             fill: 'url(#insufficientNoHover)',
             transition: "all 250ms",
             stroke: "#000000",
-            strokeWidth: 0.25
+            strokeWidth: 0.25,
+            outline: 'none'
+        },
+        pressed: {
+            outline: 'none'
         }
     };
     
