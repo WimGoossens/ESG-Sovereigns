@@ -40,7 +40,6 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 800,
     fontSize: rem(40),
     letterSpacing: -1,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     marginBottom: theme.spacing.xs,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 

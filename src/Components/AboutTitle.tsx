@@ -26,8 +26,6 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1.1,
     margin: 0,
     padding: 0,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-
     [theme.fn.smallerThan('sm')]: {
       fontSize: rem(42),
       lineHeight: 1.2,
