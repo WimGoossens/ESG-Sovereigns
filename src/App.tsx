@@ -16,7 +16,7 @@ function App() {
             colorScheme:colorScheme,
             loader: 'bars',
             // primaryColor: '#58ACAA',
-            fontFamily: 'Montserrat',
+            fontFamily: 'Roboto',
             defaultRadius: 5,
             colors: {
               'govvies': ['#58ACAA', '#000000', '#B2572A', '#3C9892', '#2F7883', '#C7D2C7', '#A05C4D', '#BA6B2D', '#9A502B', '#000000'],
