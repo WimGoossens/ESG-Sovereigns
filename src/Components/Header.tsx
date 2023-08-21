@@ -94,7 +94,7 @@ export function HeaderMegaMenu() {
             <Link to="/" style={{ textDecoration: 'none' }} onClick={() => scrollTo({ y: 0 })}>
             <Group>
               <Image src={require('../Images/logo.png')} maw={45} alt={'logo'} mx="auto" />
-              <Title order={2} color="govvies.0" fw={400}>
+              <Title order={2} color="govvies.0">
                 govvies.info
               </Title>
             </Group>
