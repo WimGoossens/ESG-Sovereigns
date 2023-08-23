@@ -1,4 +1,4 @@
-import { Accordion, Text, Container, Title, Badge, useMantineTheme } from '@mantine/core';
+import { Accordion, Text, Container, Title, Badge, useMantineTheme, createStyles } from '@mantine/core';
 import { Link } from "react-router-dom";
 import { LuClock4,
     LuMailQuestion,
@@ -8,14 +8,21 @@ import { LuClock4,
     LuActivity
 } from "react-icons/lu";
 
+const useStyles = createStyles((theme) => ({
+    wrapper: {
+      padding: `calc(${theme.spacing.xl} * 2) ${theme.spacing.xl}`,
+    },
+  }));
+
 
 const FrequentlyAskedQuestions = () => {
     const theme = useMantineTheme();
+    const { classes } = useStyles();
 
     return (
         <section id="faq">
+            <div className={classes.wrapper}>
             <Container>
-
                 <div style={{ marginBottom: 30 }}>
                     <div style={{ textAlign: 'left' }}><Badge variant="filled" color="govvies.0">FAQ</Badge></div>
                     <Text>
@@ -79,6 +86,7 @@ const FrequentlyAskedQuestions = () => {
                     </Accordion.Item>
                 </Accordion>
             </Container>
+            </div>
         </section>
     );
 

@@ -19,15 +19,15 @@ export function AboutPerson() {
                 My name is Wim Goossens and I am passionate about sustainability and ESG investing in particular. 
                 I have a background in Econometrics and Operations Research and graduated from the University of Groningen. 
                 During my studies, I came in contact with the field of ESG investing, as I wrote my master's thesis about benchmarks for equity investments that incorporated ESG exclusions.
+                In my current job, one of my main subjects is ESG risk management, where I specialize in the quantitative side of things.
               </Text>
-              <Space h="md"/>
+              {/* <Space h="md"/>
               <Text>
-                Currently, I work as a supervisor specialist at the Dutch Central Bank (<Text span fs="italic">De Nederlandsche Bank</Text>), focusing on the financial risks of pension funds and insurance companies.
-                One of my main subjects is ESG risk management, where I specialize in the quantitative side of things.
-              </Text>
+                Currently, one of my main subjects is ESG risk management, where I specialize in the quantitative side of things.
+              </Text> */}
               <Space h="md"/>
               <Text fs="italic">
-                Disclaimer: any views expressed on this website are mine and not necessarily the same as those of my employer.
+                Disclaimer: The views and opinions expressed on this website are exclusively my own.
               </Text>
               {/* <Text c="govvies.0">0aaaaaaaaaaaaaaaaaaaaa</Text>
               <Text c="govvies.1">1aaaaaaaaaaaaaaaaaaaaa</Text>

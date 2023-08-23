@@ -152,7 +152,7 @@ export function HeaderMegaMenu() {
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
             <Link to="/map" style={{ textDecoration: 'none' }} onClick={buttonHandler}>
-              <Button radius="xl" h={30} color="govvies.0">
+              <Button variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.5' }} radius="xl" h={30}>
                   Go to world map
               </Button>
             </Link>
