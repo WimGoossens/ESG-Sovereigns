@@ -8,6 +8,7 @@ import {
   Text,
   Center,
   TextInput,
+  Container,
   rem,
   Paper,
 } from '@mantine/core';
@@ -248,7 +249,7 @@ function CountryTable({ data }: TableSortProps) {
   const [scrolled, setScrolled] = useState(false);
 
   return (
-    <ScrollArea>
+      <Container size="xl">
       <TextInput
         placeholder="Search by any field"
         mb="md"
@@ -256,8 +257,8 @@ function CountryTable({ data }: TableSortProps) {
         value={search}
         onChange={handleSearchChange}
       />
-      <Paper withBorder>
-        <ScrollArea.Autosize miw={1100} mx='auto' w={'100%'} h={400}>
+      <Paper withBorder component={ScrollArea} offsetScrollbars>
+        <ScrollArea.Autosize miw={1100} mx='auto' w={'100%'} h={400} offsetScrollbars>
           <Table sx={{ tableLayout: 'auto', width: "100%" }}>
             <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
               <tr>
@@ -405,7 +406,7 @@ function CountryTable({ data }: TableSortProps) {
           </Table>
         </ScrollArea.Autosize>
       </Paper>
-    </ScrollArea>
+      </Container>
   );
 }
 
