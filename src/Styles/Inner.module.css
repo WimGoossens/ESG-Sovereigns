@@ -1,0 +1,4 @@
+.inner {
+  position: 'relative';
+  paddingBottom: rem(80);
+}

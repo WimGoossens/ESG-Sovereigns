@@ -109,8 +109,9 @@ import {
               radius="md"
               mt="xl"
               className={classes.control}
-              variant="gradient"
-              gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              // variant="gradient"
+              // gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              color="govvies.2"
               onClick={() => scrollTo({ y: 0 })}
             >
               Data description

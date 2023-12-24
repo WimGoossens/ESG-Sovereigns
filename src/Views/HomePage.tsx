@@ -2,6 +2,7 @@ import { HeroText } from "../Components/HeroTitle";
 import FrequentlyAskedQuestions from '../Components/FrequentlyAskedQuestions';
 
 import FeaturesTitle from "../Components/FeaturesData";
+import ContactForm from "../Components/ContactForm";
 
 const HomePage = () => {
     return (
@@ -17,6 +18,8 @@ const HomePage = () => {
             /> */}
 
             <FeaturesTitle/>
+
+            <ContactForm/>
 
             {/* <SectionTwo />
 

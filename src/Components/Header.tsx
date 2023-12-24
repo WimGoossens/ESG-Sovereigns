@@ -114,7 +114,12 @@ export function HeaderMegaMenu() {
           <Group position="right" className={classes.hiddenMobile}>
             <ActionToggle/>
             <Link to="/map" onClick={() => scrollTo({ y: 0 })}>
-              <Button variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.5' }} radius="xl" h={30}>
+              <Button
+              // variant="gradient"
+              // gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              color="govvies.2"
+              radius="xl"
+              h={30}>
                 Go to world map
               </Button>
             </Link>
@@ -152,7 +157,12 @@ export function HeaderMegaMenu() {
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
             <Link to="/map" style={{ textDecoration: 'none' }} onClick={buttonHandler}>
-              <Button variant="gradient" gradient={{ from: 'govvies.7', to: 'govvies.5' }} radius="xl" h={30}>
+              <Button 
+              // variant="gradient"
+              // gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              color="govvies.2"
+              radius="xl"
+              h={30}>
                   Go to world map
               </Button>
             </Link>

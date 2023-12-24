@@ -1,0 +1,4 @@
+.wrapper {
+    position: 'relative';
+    boxSizing: 'border-box';
+  }

@@ -122,8 +122,9 @@ export function HeroText() {
             <Button
               size="xl"
               className={classes.control}
-              variant="gradient"
-              gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              // variant="gradient"
+              // gradient={{ from: 'govvies.7', to: 'govvies.5' }}
+              color="govvies.2"
               onClick={() => scrollTo({ y: 0 })}
             >
               Get started

@@ -24,29 +24,29 @@ function DataSetDescription( data : IndicatorProps ) {
         }
     }
 
-    function SanctionChecker(dataType: String) {
+    function SanctionChecker(dataType: String, dataLicense: String) {
         if (dataType != "Sanctions") {
-            return "License: "
+            return <Group><Text>License:</Text><Code>{dataLicense}</Code></Group>
+        } else {
+            return
         }
     }
 
     return (
         <Container>
-            <Badge color={buttonStyler(data.type)} size="xl" style={{ margin: 20 }}>{data.type}</Badge>
             <Title >
-                {data.name}
+             <Badge color={buttonStyler(data.type)} size="xl">{data.type}</Badge> {data.name}
             </Title>
             <Space h="md" />
             <Text fs="italic">
                 Source: <Anchor href={data.sourceLink} target="_blank">{data.source}, {data.recentYear}</Anchor>
             </Text>
-            <Text fs="italic">
-                {SanctionChecker(data.type)} <Code>{data.license}</Code>
-            </Text>
+            {SanctionChecker(data.type, String(data.license))}
             <Space h="md" />
             <Text style={{ marginBottom: 20}}>
                 {data.description}
             </Text>
+            <Space h="md" />
         </Container>
     );
 }

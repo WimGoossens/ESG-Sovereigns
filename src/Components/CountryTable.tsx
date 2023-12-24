@@ -258,7 +258,7 @@ function CountryTable({ data }: TableSortProps) {
         onChange={handleSearchChange}
       />
       <Paper withBorder component={ScrollArea} offsetScrollbars>
-        <ScrollArea.Autosize miw={1100} mx='auto' w={'100%'} h={400} offsetScrollbars>
+        <ScrollArea.Autosize placeholder="Data set" miw={1100} mx='auto' w={'100%'} h={400} offsetScrollbars>
           <Table sx={{ tableLayout: 'auto', width: "100%" }}>
             <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
               <tr>

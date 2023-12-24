@@ -70,13 +70,6 @@ export function DataIntro() {
   return (
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
-        {/* <h1 className={classes.title}>
-          Quantifying ESG is difficult. Luckily, you're not alone!
-        </h1> */}
-
-          {/* <Text size="lg" color="dimmed" className={classes.description}>
-          In recent years, the focus on Environmental, Social, and Governance (ESG) factors has gained considerable momentum, as corporations and investors alike recognize the significance of sustainability and responsible governance. This evolving interest has sparked a surge in the use of various ESG data sources on sovereigns, allowing stakeholders to gain a comprehensive understanding of a country's performance in critical areas.
-          </Text> */}
           <Text size="lg" color="dimmed" className={classes.description}>
           Here you can find descriptions of the data sets that power the govvies.info world map. The selection was based on the practical guide to ESG integration in sovereign debt distributed by the United Nations Principles for Responsible Investments (UNPRI).
           </Text>
